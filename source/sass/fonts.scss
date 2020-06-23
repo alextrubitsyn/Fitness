@@ -1,0 +1,7 @@
+$font-weights: 300 400 700;
+
+@include typeface("Roboto Condensed", "RobotoCondensed", $font-weights...);
+
+$font-weights: 400 700;
+
+@include typeface("Bebas Neue", "BebasNeue", $font-weights...);

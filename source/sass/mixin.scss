@@ -1,0 +1,89 @@
+@mixin size($width, $height: $width) {
+  width: $width + px;
+  height: $height + px;
+}
+
+@mixin clear {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin pseudo($width: false, $height: $width) {
+  position: absolute;
+  content: "";
+
+  @if $width {
+    $w-str: " "+ $width;
+    $h-str: " "+ $height;
+
+    @if (str-index($w-str, "px")==null and str-index($w-str, "%")==null) {
+      width: $width + px;
+    }
+
+    @else {
+      width: $width;
+    }
+
+    @if str-index($h-str, "px")==null and str-index($h-str, "%")==null {
+      height: $height + px;
+    }
+
+    @else {
+      height: $height;
+    }
+  }
+}
+
+@mixin fonts($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size + px;
+  line-height: $height + px;
+}
+
+@mixin list {
+  @include clear;
+  list-style: none;
+}
+
+@mixin bg($position: center, $size: contain) {
+  background-repeat: no-repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin typeface ($font-name, $font-file, $font-weights...) {
+  @each $f-w in $font-weights {
+    @font-face {
+      font-family: $font-name;
+      src: url("../fonts/"+ $font-file + "-"+ $f-w + ".woff2") format("woff2"),
+        url("../fonts/"+ $font-file + "-"+ $f-w + ".woff") format("woff");
+      font-weight: #{$f-w};
+      font-style: normal;
+      font-display: swap;
+    }
+  }
+}
+
+@mixin center($x: true, $y: false) {
+  @if ($x) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if ($y) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin for-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
