@@ -36,7 +36,7 @@
 .page-header__phone-link {
   text-decoration: none;
   color: inherit;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue", "arial", sans-serif;
   @include fonts(700, 26, 26);
   letter-spacing: 0.03em;
 
@@ -64,7 +64,7 @@
 .page-header__label-city {
   @include clear;
   margin-bottom: 11px;
-  font-family: Bebas Neue;
+  font-family: "Bebas Neue", "arial", sans-serif;
   @include fonts(400, 49, 49);
   letter-spacing: 0.03em;
 }

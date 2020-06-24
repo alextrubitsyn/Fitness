@@ -1,0 +1,151 @@
+.about-us__container {
+  position: relative;
+  padding-top: 146px;
+  padding-bottom: 146px;
+  background-image: url("../img/gym-desktop.jpg");
+  @include bg($position: right 14.5% center, $size: 48.3% auto);
+
+  &:before,
+  &:after {
+    @include pseudo(26.65%, 228);
+    left: 540px;
+    bottom: 7px;
+  }
+
+  &:before {
+    z-index: 1;
+    background-image: url("../img/gym-video-desktop.jpg");
+    @include bg($position: center, $size: cover);
+  }
+
+  &:after {
+    z-index: 2;
+    background-color: rgba(20, 54, 122, 0.5);
+    background-image: url("../img/arrow-right.svg");
+    @include bg($position: center, $size: 100px 100px);
+  }
+
+  $padding-text: 5.2%;
+
+  & h2 {
+    @include clear;
+    margin-bottom: 8px;
+    padding-top: 18px;
+    padding-left: $padding-text;
+    font-family: "Bebas Neue", "arial", sans-serif;
+    @include fonts(700, 49, 49);
+    letter-spacing: 0.03em;
+  }
+
+  & span {
+    display: block;
+    margin-bottom: 40px;
+    padding-left: $padding-text;
+    @include fonts(400, 18, 27);
+  }
+
+  & p {
+    width: 36%;
+    @include clear;
+    margin-bottom: 8px;
+    padding-left: $padding-text;
+    @include fonts(300, 16, 24);
+  }
+}
+
+@include for-tablet {
+  .about-us__container {
+    padding-top: 100px;
+    padding-bottom: 61.4%;
+    text-align: center;
+    background-image: url("../img/gym-tablet.jpg");
+    @include bg($position: center bottom 83px, $size: calc(100% - 90px) auto);
+
+    &:before,
+    &:after {
+      @include pseudo(266, 167);
+      @include center;
+      bottom: 0;
+    }
+
+    &:before {
+      background-image: url("../img/gym-video-tablet.jpg");
+    }
+
+    &:after {
+      background-image: url("../img/arrow-right.svg");
+      @include bg($position: center, $size: 73px 73px);
+    }
+
+    & h2 {
+      margin-bottom: 8px;
+      padding: 0;
+      @include fonts(700, 42, 42);
+    }
+
+    & span {
+      margin-bottom: 34px;
+      padding: 0;
+    }
+
+    & div {
+      display: flex;
+      justify-content: center;
+    }
+
+    & p {
+      display: none;
+      width: 578px;
+      @include clear;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+ }
+
+@include for-mobile {
+  .about-us__container {
+    padding-top: 70px;
+    padding-bottom: calc(100% + 233px);
+    text-align: left;
+    background-image: url("../img/gym-mobile.jpg");
+    @include bg($position: center bottom 207px, $size: 100% auto);
+
+    &:before,
+    &:after {
+      @include pseudo(100%, 167);
+      @include center;
+      bottom: 0;
+    }
+
+    &:before {
+      background-image: url("../img/gym-video-mobile.jpg");
+    }
+
+    &:after {
+      background-image: url("../img/arrow-right.svg");
+      @include bg($position: center, $size: 73px 73px);
+    }
+
+    & h2 {
+      margin-bottom: 5px;
+      padding: 0;
+      @include fonts(700, 32, 32);
+    }
+
+    & span {
+      margin-bottom: 24px;
+      padding: 0;
+    }
+
+    & div {
+      justify-content: flex-start;
+    }
+
+    & p {
+      width: 260px;
+    }
+  }
+ }
