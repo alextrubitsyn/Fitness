@@ -87,3 +87,10 @@
     @content;
   }
 }
+
+@mixin retina-bg($file) {
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url($file);
+    }
+}

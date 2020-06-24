@@ -1,0 +1,244 @@
+.page-header {
+  display: block;
+  width: 100%;
+  color: $for-dark-bg;
+  background-image: url("../img/gradient-desktop.jpg");
+  @include bg($size: cover);
+}
+
+.page-header__container {
+  z-index: 1;
+  padding-top: 30px;
+  padding-bottom: 96px;
+  min-height: 658px;
+  position: relative;
+
+    &::before {
+      z-index: 0;
+      @include pseudo(500, 556);
+      @include center($x: false, $y: true);
+      left: 563px;
+      background-image: url("../img/wallpaper-desktop.jpg");
+      @include bg;
+      @include retina-bg("../img/wallpaper-desktop@2x.jpg");
+    }
+  }
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.page-header__logo {
+  margin-right: auto;
+}
+
+.page-header__phone-link {
+  text-decoration: none;
+  color: inherit;
+  font-family: Bebas Neue;
+  @include fonts(700, 26, 26);
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $price;
+  }
+}
+
+.page-header__label-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 111px;
+}
+
+.page-header__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 396px;
+  margin-right: auto;
+}
+
+.page-header__label-city {
+  @include clear;
+  margin-bottom: 11px;
+  font-family: Bebas Neue;
+  @include fonts(400, 49, 49);
+  letter-spacing: 0.03em;
+}
+
+.page-header__label-title {
+  max-width: 300px;
+  @include clear;
+  font-family: "Bebas Neue", "arial", sans-serif;
+  @include fonts(700, 109, 109);
+  letter-spacing: 0.03em;
+}
+
+.page-header__label-wrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 58px;
+}
+
+.page-header__label-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @include list;
+  margin-right: 32px;
+  padding-top: 21px;
+}
+
+.page-header__label-item {
+  @include fonts(400, 14, 21)
+}
+
+.page-header__label-link {
+  padding: 19px 54px;
+  @include fonts(700, 12, 14);
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  border: 4px solid #ffffff;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: #aa042d;
+  }
+}
+
+.page-header__social {
+  align-self: flex-end;
+}
+
+@include for-tablet {
+  .page-header {
+    background-image: url("../img/gradient-tablet.jpg");
+  }
+
+  .page-header__container {
+    padding-top: 38px;
+    padding-bottom: 96px;
+    min-height: 554px;
+
+      &::before {
+        @include size(324, 390);
+        left: auto;
+        right: 45px;
+        background-image: url("../img/wallpaper-tablet.jpg");
+        @include retina-bg("../img/wallpaper-tablet@2x.jpg");
+      }
+    }
+
+  .page-header__phone-link {
+    @include fonts(700, 24, 24);
+    letter-spacing: 0.02em;
+  }
+
+  .page-header__label-container {
+    padding-top: 74px;
+  }
+
+  .page-header__label {
+    align-items: flex-start;
+    width: 324px;
+    margin-right: auto;
+  }
+
+  .page-header__label-city {
+    margin-bottom: 6px;
+    margin-left: auto;
+    @include fonts(400, 34, 34);
+  }
+
+  .page-header__label-title {
+    max-width: 300px;
+    margin-left: auto;
+    @include fonts(700, 86, 86);
+  }
+
+  .page-header__label-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .page-header__label-list {
+    margin-right: 27px;
+    padding-top: 6px;
+  }
+
+  .page-header__label-link {
+    margin-left: auto;
+    padding: 19px 30px;
+  }
+}
+
+@include for-mobile {
+  .page-header {
+    background-image: url("../img/gradient-mobile.jpg");
+  }
+
+  .page-header__container {
+    padding-top: 18px;
+    padding-bottom: 78px;
+    min-height: 491px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+  .page-header__phone-link {
+    @include fonts(700, 20, 20);
+
+  }
+
+  .page-header__label-container {
+    padding-top: 74px;
+    justify-content: center;
+  }
+
+  .page-header__label {
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 0;
+  }
+
+  .page-header__label-city {
+    margin-bottom: 12px;
+    margin-left: 0;
+    @include fonts(400, 28, 28);
+  }
+
+  .page-header__label-title {
+    max-width: 100%;
+    margin-left: 0;
+    @include fonts(700, 78, 78);
+  }
+
+  .page-header__label-wrapper {
+    margin-bottom: 42px;
+    justify-content: flex-end;
+  }
+
+  .page-header__label-list {
+    margin-right: 10px;
+    padding-top: 3px;
+  }
+
+  .page-header__label-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    padding: 20px 30px;
+  }
+}

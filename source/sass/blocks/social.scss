@@ -1,0 +1,47 @@
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include list;
+}
+
+.social__item {
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.social__link {
+  text-decoration: none;
+  color: inherit;
+  @include fonts(400, 12, 14);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $price;
+  }
+}
+
+.social__link-image {
+  display: block;
+
+  &--facebook {
+    @include size(12, 9);
+  }
+
+  &--vk {
+    @include size(14, 9);
+  }
+
+  &--instagram {
+    @include size(11, 10);
+  }
+}
+
+@include for-tablet{
+  .social {
+    display: none;
+  }
+}

@@ -1,0 +1,25 @@
+.logo {
+  @include size(89, 20);
+
+  @include for-tablet {
+    @include size(82, 18);
+  }
+
+  @include for-mobile {
+    @include size(68, 15);
+  }
+}
+
+.logo__image {
+  display: block;
+  
+  @include size(89, 20);
+
+  @include for-tablet {
+    @include size(82, 18);
+  }
+
+  @include for-mobile {
+    @include size(68, 15);
+  }
+}

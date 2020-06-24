@@ -1,0 +1,13 @@
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  @include for-tablet {
+    padding: 0 45px;
+  }
+
+  @include for-mobile {
+    padding: 0 15px;
+  }
+}
