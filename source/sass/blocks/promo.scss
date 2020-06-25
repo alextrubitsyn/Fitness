@@ -1,0 +1,252 @@
+.promo {
+  padding: 120px 0;
+}
+
+.promo__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 82px 58.57% 87px 6.7%;
+  color: $for-dark-bg;
+  min-height: 500px;
+  background-color: $promo-bg;
+
+  &::after {
+    @include pseudo(57%, 100%);
+    top: 0;
+    right: 0;
+    background-image: url("../img/crossfit-desktop.jpg");
+    @include retina-bg("../img/crossfit-desktop@2x.jpg");
+    @include bg($size: cover);
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 11px;
+
+  & h2 {
+    width: 251px;
+    @include clear;
+    font-family: "Bebas Neue", "arial", sans-serif;
+    @include fonts(700, 90, 90);
+    letter-spacing: 0.03em;
+  }
+}
+
+.promo__date-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.promo__date {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+
+  & h3 {
+    @include clear;
+    padding-bottom: 3px;
+    @include fonts(400, 18, 27);
+    border-bottom: 1px solid #ffffff;
+  }
+
+  & b {
+    @include clear;
+    margin-right: 7px;
+    @include fonts(700, 40, 60);
+  }
+
+  & p {
+    @include clear;
+    display: flex;
+    flex-direction: column;
+    @include fonts(400, 14, 21);
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -8px;
+  }
+}
+
+.promo__time {
+  display: inline-flex;
+  flex-direction: column;
+
+  & h3 {
+    @include clear;
+    padding-bottom: 3px;
+    @include fonts(400, 18, 27);
+    border-bottom: 1px solid #ffffff;
+  }
+
+  & b {
+    @include clear;
+    margin-top: -6px;
+    @include fonts(700, 40, 60);
+  }
+}
+
+.promo__container > p {
+  @include clear;
+  margin-bottom: 44px;
+  @include fonts(400, 18, 27);
+}
+
+.promo__container > a {
+  display: inline-block;
+  padding: 24px 110px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  @include fonts(700, 12, 14);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 4px solid #ffffff;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $price;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@include for-tablet {
+  .promo {
+    padding: 100px 0;
+  }
+
+  .promo__container {
+    padding: 50px 58.57% 50px 6.7%;
+    min-height: 292px;
+
+  &::after {
+    @include pseudo(57%, 100%);
+    background-image: url("../img/crossfit-tablet.jpg");
+    @include retina-bg("../img/crossfit-tablet@2x.jpg");
+  }
+
+  }
+
+  .promo__wrapper {
+    margin-bottom: 0;
+
+    & h2 {
+      width: 145px;
+      @include fonts(700, 52, 52);
+    }
+  }
+
+  .promo__date {
+    margin-bottom: 0;
+
+    & h3 {
+      margin-bottom: 4px;
+      padding-bottom: 0;
+      @include fonts(400, 12, 18);
+    }
+
+    & b {
+      margin-right: 7px;
+      @include fonts(700, 24, 36);
+    }
+
+    & p {
+      @include fonts(400, 10, 15);
+    }
+  }
+
+  .promo__time {
+
+    & h3 {
+      margin-bottom: 4px;
+      padding-bottom: 0;
+      @include fonts(400, 12, 18);
+    }
+
+    & b {
+      @include fonts(700, 24, 36);
+    }
+  }
+
+  .promo__container > p {
+    margin-bottom: 30px;
+    @include fonts(400, 12, 18);
+  }
+
+  .promo__container > a {
+    padding: 12px 51px;
+    @include fonts(700, 10, 12);
+    border: 2px solid #ffffff;
+  }
+}
+
+@include for-mobile {
+  .promo {
+    padding: 70px 0;
+  }
+
+  .promo__container {
+    align-items: center;
+    padding: 48px 0 343px;
+
+  &::after {
+    top: auto;
+    bottom: 0;
+    @include pseudo(100%, 50%);
+    background-image: url("../img/crossfit-mobile.jpg");
+    @include retina-bg("../img/crossfit-mobile@2x.jpg");
+  }
+
+  }
+
+  .promo__wrapper {
+    margin-bottom: 0;
+
+    & h2 {
+      width: 145px;
+    }
+  }
+
+  .promo__date {
+    margin-bottom: 0;
+
+    & h3 {
+      margin-bottom: 4px;
+    }
+
+    & b {
+      margin-right: 7px;
+    }
+  }
+
+  .promo__time {
+
+    & h3 {
+      margin-bottom: 4px;
+      padding-bottom: 0;
+      @include fonts(400, 12, 18);
+    }
+  }
+
+  .promo__container > p {
+    margin-bottom: 30px;
+  }
+
+  .promo__container > a {
+    padding: 12px 51px;
+  }
+}

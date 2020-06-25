@@ -7,7 +7,7 @@
     z-index: 0;
     @include pseudo(287, 494);
     right: 0;
-    bottom: -110px;
+    bottom: -150px;
     background-image: url("../img/weights-desktop.png");
     @include retina-bg("../img/weights-desktop@2x.png");
     @include bg;
@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 115px 0 120px;
+  padding: 115px 0 80px;
 }
 
 .products__title {
@@ -174,6 +174,10 @@ input[name="period"]:focus~.products__labels>label {
       border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
       border-image-slice: 1;
     }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -189,14 +193,14 @@ input[name="period"]:focus~.products__labels>label {
     &::after {
       @include pseudo(347, 444);
       right: 0;
-      bottom: -130px;
+      bottom: -125px;
       background-image: url("../img/weights-tablet.png");
       @include retina-bg("../img/weights-tablet@2x.png");
     }
   }
 
   .products__container {
-    padding: 98px 0 56px;
+    padding: 98px 0 60px;
   }
 
   .products__title {
@@ -226,7 +230,6 @@ input[name="period"]:focus~.products__labels>label {
     flex-direction: column;
 
     & div {
-      outline: 1px solid red;
       padding: 54px 108px 60px;
     }
 
@@ -259,7 +262,7 @@ input[name="period"]:focus~.products__labels>label {
   }
 
   .products__container {
-    padding: 67px 0 56px;
+    padding: 67px 0 32px;
   }
 
   .products__title {
@@ -290,7 +293,6 @@ input[name="period"]:focus~.products__labels>label {
 
     & div {
       width: 100%;
-      outline: 1px solid red;
       padding: 44px 32px 46px;
     }
 

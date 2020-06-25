@@ -45,6 +45,10 @@
     cursor: pointer;
     color: $price;
   }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .page-header__label-container {
@@ -112,6 +116,10 @@
   &:focus {
     cursor: pointer;
     background-color: #aa042d;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 

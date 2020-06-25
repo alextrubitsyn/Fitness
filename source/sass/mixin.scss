@@ -76,6 +76,11 @@
   }
 }
 
+@mixin center-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 @mixin for-tablet {
   @media (max-width: $tablet-width) {
     @content;

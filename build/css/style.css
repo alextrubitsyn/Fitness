@@ -147,6 +147,8 @@ input[type="file"].visually-hidden {
   .page-header__phone-link:hover, .page-header__phone-link:focus {
     cursor: pointer;
     color: #103aae; }
+  .page-header__phone-link:active {
+    opacity: 0.5; }
 
 .page-header__label-container {
   display: -webkit-box;
@@ -243,6 +245,8 @@ input[type="file"].visually-hidden {
   .page-header__label-link:hover, .page-header__label-link:focus {
     cursor: pointer;
     background-color: #aa042d; }
+  .page-header__label-link:active {
+    opacity: 0.5; }
 
 .page-header__social {
   -ms-flex-item-align: end;
@@ -413,6 +417,8 @@ input[type="file"].visually-hidden {
   .social__link:hover, .social__link:focus {
     cursor: pointer;
     color: #103aae; }
+  .social__link:active {
+    opacity: 0.5; }
 
 .social__link-image {
   display: block; }
@@ -621,7 +627,7 @@ input[type="file"].visually-hidden {
     width: 287px;
     height: 494px;
     right: 0;
-    bottom: -110px;
+    bottom: -150px;
     background-image: url("../img/weights-desktop.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -644,7 +650,7 @@ input[type="file"].visually-hidden {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 115px 0 120px; }
+  padding: 115px 0 80px; }
 
 .products__title {
   margin: 0;
@@ -814,6 +820,8 @@ input[name="period"]:focus ~ .products__labels > label {
       -o-border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
          border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
       border-image-slice: 1; }
+    .products__item a:active {
+      opacity: 0.5; }
 
 #month:checked ~ .products__item--month,
 #half-year:checked ~ .products__item--half-year,
@@ -829,7 +837,7 @@ input[name="period"]:focus ~ .products__labels > label {
     width: 347px;
     height: 444px;
     right: 0;
-    bottom: -130px;
+    bottom: -125px;
     background-image: url("../img/weights-tablet.png"); } }
   @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
     .products::after {
@@ -837,7 +845,7 @@ input[name="period"]:focus ~ .products__labels > label {
 
 @media (max-width: 1199px) {
   .products__container {
-    padding: 98px 0 56px; }
+    padding: 98px 0 60px; }
   .products__title {
     margin-bottom: 30px;
     font-weight: 700;
@@ -861,7 +869,6 @@ input[name="period"]:focus ~ .products__labels > label {
         -ms-flex-direction: column;
             flex-direction: column; }
     .products__item div {
-      outline: 1px solid red;
       padding: 54px 108px 60px; }
     .products__item div:not(:last-child) {
       margin-bottom: 40px;
@@ -878,7 +885,7 @@ input[name="period"]:focus ~ .products__labels > label {
   .products::after {
     display: none; }
   .products__container {
-    padding: 67px 0 56px; }
+    padding: 67px 0 32px; }
   .products__title {
     margin-bottom: 22px;
     font-weight: 700;
@@ -903,7 +910,6 @@ input[name="period"]:focus ~ .products__labels > label {
             flex-direction: column; }
     .products__item div {
       width: 100%;
-      outline: 1px solid red;
       padding: 44px 32px 46px; }
     .products__item div:not(:last-child) {
       margin-bottom: 37px; }
@@ -938,3 +944,281 @@ input[name="period"]:focus ~ .products__labels > label {
         font-weight: 700;
         font-size: 80px;
         line-height: 120px; } }
+
+.promo {
+  padding: 120px 0; }
+
+.promo__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 82px 58.57% 87px 6.7%;
+  color: #ffffff;
+  min-height: 500px;
+  background-color: #ed0223; }
+  .promo__container::after {
+    position: absolute;
+    content: "";
+    width: 57%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: url("../img/crossfit-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .promo__container::after {
+        background-image: url("../img/crossfit-desktop@2x.jpg"); } }
+
+.promo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 11px; }
+  .promo__wrapper h2 {
+    width: 251px;
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", "arial", sans-serif;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: 0.03em; }
+
+.promo__date-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.promo__date {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 12px; }
+  .promo__date h3 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    border-bottom: 1px solid #ffffff; }
+  .promo__date b {
+    margin: 0;
+    padding: 0;
+    margin-right: 7px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px; }
+  .promo__date p {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px; }
+  .promo__date div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -8px; }
+
+.promo__time {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .promo__time h3 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    border-bottom: 1px solid #ffffff; }
+  .promo__time b {
+    margin: 0;
+    padding: 0;
+    margin-top: -6px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px; }
+
+.promo__container > p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 44px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px; }
+
+.promo__container > a {
+  display: inline-block;
+  padding: 24px 110px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 4px solid #ffffff; }
+  .promo__container > a:hover, .promo__container > a:focus {
+    outline: none;
+    background-color: #103aae; }
+  .promo__container > a:active {
+    opacity: 0.5; }
+
+@media (max-width: 1199px) {
+  .promo {
+    padding: 100px 0; }
+  .promo__container {
+    padding: 50px 58.57% 50px 6.7%;
+    min-height: 292px; }
+    .promo__container::after {
+      position: absolute;
+      content: "";
+      width: 57%;
+      height: 100%;
+      background-image: url("../img/crossfit-tablet.jpg"); } }
+    @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+      .promo__container::after {
+        background-image: url("../img/crossfit-tablet@2x.jpg"); } }
+
+@media (max-width: 1199px) {
+  .promo__wrapper {
+    margin-bottom: 0; }
+    .promo__wrapper h2 {
+      width: 145px;
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 52px; }
+  .promo__date {
+    margin-bottom: 0; }
+    .promo__date h3 {
+      margin-bottom: 4px;
+      padding-bottom: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px; }
+    .promo__date b {
+      margin-right: 7px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px; }
+    .promo__date p {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 15px; }
+  .promo__time h3 {
+    margin-bottom: 4px;
+    padding-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px; }
+  .promo__time b {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px; }
+  .promo__container > p {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px; }
+  .promo__container > a {
+    padding: 12px 51px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    border: 2px solid #ffffff; } }
+
+@media (max-width: 767px) {
+  .promo {
+    padding: 70px 0; }
+  .promo__container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 48px 0 343px; }
+    .promo__container::after {
+      top: auto;
+      bottom: 0;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 50%;
+      background-image: url("../img/crossfit-mobile.jpg"); } }
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+      .promo__container::after {
+        background-image: url("../img/crossfit-mobile@2x.jpg"); } }
+
+@media (max-width: 767px) {
+  .promo__wrapper {
+    margin-bottom: 0; }
+    .promo__wrapper h2 {
+      width: 145px; }
+  .promo__date {
+    margin-bottom: 0; }
+    .promo__date h3 {
+      margin-bottom: 4px; }
+    .promo__date b {
+      margin-right: 7px; }
+  .promo__time h3 {
+    margin-bottom: 4px;
+    padding-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px; }
+  .promo__container > p {
+    margin-bottom: 30px; }
+  .promo__container > a {
+    padding: 12px 51px; } }

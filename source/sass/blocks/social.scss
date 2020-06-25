@@ -22,6 +22,10 @@
     cursor: pointer;
     color: $price;
   }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .social__link-image {
