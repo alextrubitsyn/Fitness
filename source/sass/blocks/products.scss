@@ -1,0 +1,329 @@
+.products {
+  position: relative;
+  text-align: center;
+  background-color: $products-bg-color;
+
+  &::after {
+    z-index: 0;
+    @include pseudo(287, 494);
+    right: 0;
+    bottom: -110px;
+    background-image: url("../img/weights-desktop.png");
+    @include retina-bg("../img/weights-desktop@2x.png");
+    @include bg;
+  }
+}
+
+.products__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 115px 0 120px;
+}
+
+.products__title {
+  @include clear;
+  margin-bottom: 35px;
+  font-family: "Bebas Neue", "arial", sans-serif;
+  @include fonts(700, 49, 49);
+  letter-spacing: 0.03em;
+}
+
+#month:checked~.products__labels>label[for="month"]:after,
+#half-year:checked~.products__labels>label[for="half-year"]:after,
+#year:checked~.products__labels>label[for="year"]:after {
+  display: block;
+}
+
+input[name="period"]:focus~.products__labels>label {
+  color: #D10A42;
+}
+
+.products__labels {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 37px;
+  @include fonts(400, 20, 30);
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  & label {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+    &:hover {
+      color: #D10A42;
+      cursor: pointer;
+    }
+
+    &::after {
+      @include pseudo(100%, 2);
+      left: 0;
+      bottom: -4px;
+      display: none;
+      border: 2px solid #D10A42;
+    }
+  }
+
+  & label:not(:last-child) {
+    margin-right: 46px;
+  }
+}
+
+.products__item {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & div {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 56px 68px 60px;
+    background-color: #ffffff;
+    border: 7px solid transparent;
+
+    &:hover {
+      border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      border-image-slice: 1;
+
+      & a {
+        background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+        color: #ffffff;
+        border-color: transparent;
+      }
+    }
+  }
+
+  & div:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  & h3 {
+    @include clear;
+    margin-bottom: 10px;
+    @include fonts(700, 26, 29);
+  }
+
+  & span {
+    display: block;
+    margin-bottom: 65px;
+    @include fonts(400, 16, 24);
+  }
+
+  & p {
+    z-index: 1;
+    position: relative;
+    @include clear;
+    margin-bottom: 34px;
+    padding-right: 45px;
+    color: $price;
+    @include fonts(700, 60, 90);
+
+    &::before {
+      @include pseudo(30, 42);
+      @include center($x: false, $y: true);
+      right: 0;
+      background-image: url("../../img/ruble.svg");
+      @include bg($position: right center, $size: 30px 42px);
+    }
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      content: attr(data-description);
+      @include center;
+      bottom: -7px;
+      @include fonts(700, 100, 150);
+      color: #e8e8e8;
+      opacity: 0.48;
+    }
+  }
+
+  & a {
+    z-index: 10;
+    padding: 24px 45px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    @include fonts(700, 12, 14);
+    border: 2px solid #102654;
+
+    &:focus {
+      background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    &:focus::after {
+      outline: none;
+      @include pseudo;
+      width: calc(100% + 14px);
+      height: calc(100% + 14px);
+      left: -7px;
+      right: -14px;
+      top: -7px;
+      bottom: -14px;
+      border: 7px solid transparent;
+      border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      border-image-slice: 1;
+    }
+  }
+}
+
+#month:checked~.products__item--month,
+#half-year:checked~.products__item--half-year,
+#year:checked~.products__item--year {
+  display: flex;
+}
+
+@include for-tablet {
+  .products {
+
+    &::after {
+      @include pseudo(347, 444);
+      right: 0;
+      bottom: -130px;
+      background-image: url("../img/weights-tablet.png");
+      @include retina-bg("../img/weights-tablet@2x.png");
+    }
+  }
+
+  .products__container {
+    padding: 98px 0 56px;
+  }
+
+  .products__title {
+    margin-bottom: 30px;
+    @include fonts(700, 42, 42);
+  }
+
+  .products__labels {
+    margin-bottom: 45px;
+    @include fonts(400, 18, 27);
+
+    & label {
+      padding-bottom: 10px;
+
+      &::after {
+        left: 0;
+        bottom: -4px;
+      }
+    }
+
+    & label:not(:last-child) {
+      margin-right: 55px;
+    }
+  }
+
+  .products__item {
+    flex-direction: column;
+
+    & div {
+      outline: 1px solid red;
+      padding: 54px 108px 60px;
+    }
+
+    & div:not(:last-child) {
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    & h3 {
+      margin-bottom: 11px;
+    }
+
+    & span {
+      margin-bottom: 65px;
+    }
+
+    & p {
+      margin-bottom: 34px;
+      padding-right: 45px;
+    }
+  }
+}
+
+@include for-mobile {
+  .products {
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .products__container {
+    padding: 67px 0 56px;
+  }
+
+  .products__title {
+    margin-bottom: 22px;
+    @include fonts(700, 32, 32);
+  }
+
+  .products__labels {
+    margin-bottom: 35px;
+    @include fonts(400, 16, 24);
+
+    & label {
+      padding-bottom: 10px;
+
+      &::after {
+        left: 0;
+        bottom: -4px;
+      }
+    }
+
+    & label:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+
+  .products__item {
+    flex-direction: column;
+
+    & div {
+      width: 100%;
+      outline: 1px solid red;
+      padding: 44px 32px 46px;
+    }
+
+    & div:not(:last-child) {
+      margin-bottom: 37px;
+    }
+
+    & h3 {
+      margin-bottom: 8px;
+      @include fonts(700, 22, 24);
+    }
+
+    & span {
+      margin-bottom: 55px;
+    }
+
+    & p {
+      margin-bottom: 29px;
+      padding-right: 34px;
+      @include fonts(700, 48, 72);
+
+      &::before {
+        @include pseudo(24, 33);
+        @include center($x: false, $y: true);
+        right: 0;
+        background-image: url("../../img/ruble.svg");
+        @include bg($position: right center, $size: 24px 33px);
+      }
+
+      &::after {
+        bottom: 0;
+        @include fonts(700, 80, 120);
+      }
+    }
+  }
+}
