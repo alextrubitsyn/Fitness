@@ -1,0 +1,258 @@
+.coaches__title {
+  @include clear;
+  margin-bottom: 52px;
+  font-family: "Bebas Neue", "arial", sans-serif;
+  @include fonts(700, 49, 49);
+  letter-spacing: 0.03em;
+}
+
+.coaches__wrapper {
+  position: relative;
+}
+
+.coaches__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.coaches__item {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 260px;
+  min-height: 294px;
+  margin-bottom: 40px;
+  padding: 53px 40px 53px 40px;
+  @include fonts(400, 14, 21);
+  color: $for-dark-bg;
+  background-color: rgba(16, 38, 84, 0.89);
+
+  &--show {
+    display: flex;
+  }
+
+  &:hover img,
+  &:focus img {
+    display: none;
+  }
+
+  &:hover h3,
+  &:focus h3{
+    position: static;
+    text-align: center;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin-bottom: -5px;
+  }
+
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  & h3 {
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    @include center;
+    bottom: 28px;
+    @include clear;
+    margin-bottom: -5px;
+    align-self: center;
+    text-align: center;
+    @include fonts(700, 18, 27);
+  }
+
+  & span {
+    align-self: center;
+    margin-bottom: 33px;
+    @include fonts(400, 16, 24);
+    color: #B6bdcc;
+  }
+}
+
+.coaches__description {
+  @include clear;
+  padding-left: 15px;
+  list-style: none;
+
+  & li {
+    position: relative;
+    width: 160px;
+    padding-left: 16px;
+
+    &::after{
+      @include pseudo(6);
+      top: 6px;
+      left: 0;
+      border-radius: 50%;
+      background-color: #ffffff;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+}
+
+.coaches__slider-control {
+  position: absolute;
+  display: block;
+  top: calc(50% - 20px);
+  transform: translateY(-50%);
+  color: #afafaf;
+  @include size(20, 35);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    top: 6px;
+    @include pseudo(23);
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-top-color: #afafaf;
+    border-left-color: #afafaf;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+
+  &:hover::after,
+  &:focus::after {
+    border-top-color: red;
+    border-left-color: red;
+  }
+  }
+
+  &--left {
+    left: -60px;
+
+    &::after {
+      left: 6px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--right {
+    right: -60px;
+
+    &::after {
+      right: 6px;
+      transform: rotate(135deg);
+    }
+  }
+
+  & svg {
+    display: block;
+    @include size(16, 32);
+  }
+}
+
+@include for-tablet {
+  .coaches__title {
+    margin-bottom: 42px;
+    text-align: center;
+    @include fonts(700, 42, 42);
+  }
+
+  .coaches__list {
+    justify-content: center;
+  }
+
+  .coaches__item {
+    width: 268px;
+    margin-bottom: 0;
+    padding: 51px 40px 51px 40px;
+
+    &:hover h3,
+    &:focus h3{
+      padding-right: 10px;
+    }
+
+    & h3 {
+      left: calc(50% + 4px);
+    }
+
+    & span {
+      margin-bottom: 34px;
+      padding-right: 10px;
+    }
+  }
+
+  .coaches__slider-control {
+    top: 50%;
+
+    &--left {
+      left: -3px;
+    }
+
+    &--right {
+      right: -3px;
+    }
+  }
+}
+
+@include for-mobile {
+  .coaches__title {
+    margin-bottom: 42px;
+    @include fonts(700, 32, 32);
+  }
+
+  .coaches__list {
+    justify-content: center;
+  }
+
+  .coaches__item {
+    width: 226px;
+    min-height: 274px;
+    margin-bottom: 0;
+    padding: 43px 18px 18px 18px;
+
+    &:hover h3,
+    &:focus h3{
+      padding-right: 0;
+    }
+
+    & h3 {
+      left: 50%;
+    }
+
+    & span {
+      margin-bottom: 34px;
+      padding-right: 0;
+    }
+  }
+
+  .coaches__slider-control {
+    top: 50%;
+    @include size(16, 26);
+
+    &::after {
+      @include pseudo(16);
+    }
+
+    &--left {
+      left: -5px;
+    }
+
+    &--right {
+      right: -5px;
+    }
+
+    & svg {
+      @include size(10, 18);
+    }
+  }
+}

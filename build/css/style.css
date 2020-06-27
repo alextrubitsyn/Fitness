@@ -946,7 +946,7 @@ input[name="period"]:focus ~ .products__labels > label {
         line-height: 120px; } }
 
 .promo {
-  padding: 120px 0; }
+  padding: 120px 0 117px; }
 
 .promo__container {
   position: relative;
@@ -1222,3 +1222,234 @@ input[name="period"]:focus ~ .products__labels > label {
     margin-bottom: 30px; }
   .promo__container > a {
     padding: 12px 51px; } }
+
+.coaches__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 52px;
+  font-family: "Bebas Neue", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em; }
+
+.coaches__wrapper {
+  position: relative; }
+
+.coaches__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.coaches__item {
+  display: none;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 260px;
+  min-height: 294px;
+  margin-bottom: 40px;
+  padding: 53px 40px 53px 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: rgba(16, 38, 84, 0.89); }
+  .coaches__item--show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .coaches__item:hover img,
+  .coaches__item:focus img {
+    display: none; }
+  .coaches__item:hover h3,
+  .coaches__item:focus h3 {
+    position: static;
+    text-align: center;
+    left: auto;
+    bottom: auto;
+    -webkit-transform: none;
+            transform: none;
+    margin-bottom: -5px; }
+  .coaches__item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+  .coaches__item h3 {
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 28px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -5px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px; }
+  .coaches__item span {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-bottom: 33px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #B6bdcc; }
+
+.coaches__description {
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  list-style: none; }
+  .coaches__description li {
+    position: relative;
+    width: 160px;
+    padding-left: 16px; }
+    .coaches__description li::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      top: 6px;
+      left: 0;
+      border-radius: 50%;
+      background-color: #ffffff; }
+    .coaches__description li:not(:last-child) {
+      margin-bottom: 13px; }
+
+.coaches__slider-control {
+  position: absolute;
+  display: block;
+  top: calc(50% - 20px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #afafaf;
+  width: 20px;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+  .coaches__slider-control::after {
+    top: 6px;
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-top-color: #afafaf;
+    border-left-color: #afafaf; }
+  .coaches__slider-control:hover, .coaches__slider-control:focus {
+    outline: 0; }
+    .coaches__slider-control:hover:hover::after, .coaches__slider-control:hover:focus::after, .coaches__slider-control:focus:hover::after, .coaches__slider-control:focus:focus::after {
+      border-top-color: red;
+      border-left-color: red; }
+  .coaches__slider-control--left {
+    left: -60px; }
+    .coaches__slider-control--left::after {
+      left: 6px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .coaches__slider-control--right {
+    right: -60px; }
+    .coaches__slider-control--right::after {
+      right: 6px;
+      -webkit-transform: rotate(135deg);
+              transform: rotate(135deg); }
+  .coaches__slider-control svg {
+    display: block;
+    width: 16px;
+    height: 32px; }
+
+@media (max-width: 1199px) {
+  .coaches__title {
+    margin-bottom: 42px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px; }
+  .coaches__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .coaches__item {
+    width: 268px;
+    margin-bottom: 0;
+    padding: 51px 40px 51px 40px; }
+    .coaches__item:hover h3,
+    .coaches__item:focus h3 {
+      padding-right: 10px; }
+    .coaches__item h3 {
+      left: calc(50% + 4px); }
+    .coaches__item span {
+      margin-bottom: 34px;
+      padding-right: 10px; }
+  .coaches__slider-control {
+    top: 50%; }
+    .coaches__slider-control--left {
+      left: -3px; }
+    .coaches__slider-control--right {
+      right: -3px; } }
+
+@media (max-width: 767px) {
+  .coaches__title {
+    margin-bottom: 42px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px; }
+  .coaches__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .coaches__item {
+    width: 226px;
+    min-height: 274px;
+    margin-bottom: 0;
+    padding: 43px 18px 18px 18px; }
+    .coaches__item:hover h3,
+    .coaches__item:focus h3 {
+      padding-right: 0; }
+    .coaches__item h3 {
+      left: 50%; }
+    .coaches__item span {
+      margin-bottom: 34px;
+      padding-right: 0; }
+  .coaches__slider-control {
+    top: 50%;
+    width: 16px;
+    height: 26px; }
+    .coaches__slider-control::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px; }
+    .coaches__slider-control--left {
+      left: -5px; }
+    .coaches__slider-control--right {
+      right: -5px; }
+    .coaches__slider-control svg {
+      width: 10px;
+      height: 18px; } }
