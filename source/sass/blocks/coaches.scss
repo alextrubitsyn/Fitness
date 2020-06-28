@@ -1,3 +1,7 @@
+.coaches {
+  margin-bottom: 198px;
+}
+
 .coaches__title {
   @include clear;
   margin-bottom: 52px;
@@ -205,7 +209,11 @@
 }
 
 @include for-mobile {
-  .coaches__title {
+  .coaches {
+    margin-bottom: 139px;
+  }
+
+    .coaches__title {
     margin-bottom: 42px;
     @include fonts(700, 32, 32);
   }
