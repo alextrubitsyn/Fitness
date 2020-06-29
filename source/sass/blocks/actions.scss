@@ -143,9 +143,6 @@
     min-height: 462px;
     margin-right: 0;
     margin-bottom: 30px;
-    // background-image: url("../img/action-tablet.jpg");
-    // @include retina-bg("../img/action-tablet@2x.jpg");
-    @include bg($position: right center, $size: 399px 100%);
 
     &::after {
       @include pseudo(calc(100% - 279px), 100%);

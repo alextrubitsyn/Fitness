@@ -1571,11 +1571,11 @@ input[name="period"]:focus ~ .products__labels > label {
   width: 340px; }
   .advantages__item--dimension {
     padding-left: 26px;
-    padding-bottom: 77px;
+    padding-bottom: 73px;
     margin-right: 360px;
     border-bottom: 2px solid rgba(209, 10, 66, 0.2); }
   .advantages__item--parking {
-    padding-bottom: 77px;
+    padding-bottom: 73px;
     border-bottom: 2px solid rgba(209, 10, 66, 0.2); }
   .advantages__item--comfort {
     padding-left: 19px;
@@ -1755,22 +1755,22 @@ input[name="period"]:focus ~ .products__labels > label {
     margin-bottom: 34px;
     text-align: center; }
     .advantages__item--dimension {
-      margin-right: auto;
+      margin-right: 0;
       border-bottom: none; }
       .advantages__item--dimension b {
         margin-left: -7px; }
     .advantages__item--parking {
       margin-bottom: -6px; }
       .advantages__item--parking div {
-        margin-left: -34px; }
+        margin-left: 0; }
       .advantages__item--parking b {
         margin-left: -7px; }
     .advantages__item--comfort {
-      margin-right: auto; }
+      margin-right: 0; }
       .advantages__item--comfort b {
         margin-left: -7px; }
     .advantages__item--coaches div {
-      margin-left: -34px; }
+      margin-left: 0; }
     .advantages__item--coaches b {
       margin-left: -7px; }
     .advantages__item div {
@@ -1972,10 +1972,7 @@ input[name="period"]:focus ~ .products__labels > label {
     width: 100%;
     min-height: 462px;
     margin-right: 0;
-    margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 399px 100%; }
+    margin-bottom: 30px; }
     .actions__best::after {
       position: absolute;
       content: "";
