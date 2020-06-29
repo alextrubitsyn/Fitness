@@ -157,11 +157,6 @@
       transform: rotate(135deg);
     }
   }
-
-  & svg {
-    display: block;
-    @include size(16, 32);
-  }
 }
 
 @include for-tablet {
@@ -257,10 +252,6 @@
 
     &--right {
       right: -5px;
-    }
-
-    & svg {
-      @include size(10, 18);
     }
   }
 }

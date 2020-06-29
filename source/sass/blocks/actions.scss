@@ -1,5 +1,5 @@
 .actions {
-  margin-bottom: 50px;
+  margin-bottom: 118px;
 }
 
 .actions__title {
@@ -121,7 +121,7 @@
 
 @include for-tablet {
   .actions {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   .actions__title {
@@ -203,10 +203,6 @@
 }
 
 @include for-mobile {
-  .actions {
-    margin-bottom: 50px;
-  }
-
   .actions__title {
     margin-bottom: 43px;
     @include fonts(700, 32, 32);

@@ -1,0 +1,173 @@
+.reviews {
+  margin-bottom: 50px;
+}
+
+.reviews__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.reviews__title {
+  @include clear;
+  margin-bottom: 52px;
+  font-family: "Bebas Neue", "arial", sans-serif;
+  @include fonts(700, 49, 49);
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.reviews__item {
+  position: relative;
+  display: none;
+  width: 560px;
+  min-height: 242px;
+  padding: 54px 62px 54px 170px;
+  color: $for-dark-bg;
+  background-color: $action-color;
+
+  &--show {
+    display: block;
+  }
+
+  & img {
+    position: absolute;
+    top: 62px;
+    left: 62px;
+    display: block;
+    @include size(80);
+    border-radius: 50%;
+  }
+
+  & h3 {
+    @include clear;
+    margin-bottom: 13px;
+    @include fonts(700, 20, 30);
+  }
+
+  & p {
+    @include clear;
+    @include fonts(400, 16, 22);
+  }
+}
+
+.reviews__slider-control {
+  position: absolute;
+  display: block;
+  @include center-y;
+  color: #afafaf;
+  @include size(20, 35);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    top: 6px;
+    @include pseudo(23);
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-top-color: #afafaf;
+    border-left-color: #afafaf;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+
+    &:hover::after,
+    &:focus::after {
+      border-top-color: red;
+      border-left-color: red;
+    }
+  }
+
+  &--left {
+    left: calc(50% - 340px);
+
+    &::after {
+      left: 6px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--right {
+    right: calc(50% - 340px);
+
+    &::after {
+      right: 6px;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+@include for-tablet {
+  .reviews {
+    margin-bottom: 50px;
+  }
+
+  .reviews__title {
+    @include clear;
+    margin-bottom: 40px;
+    @include fonts(700, 42, 42);
+  }
+
+  .reviews__item {
+    width: 566px;
+    padding: 54px 62px 54px 173px;
+
+    & img {
+      left: 65px;
+    }
+  }
+}
+
+@include for-mobile {
+  .reviews {
+    margin-bottom: 50px;
+  }
+
+  .reviews__title {
+    @include clear;
+    margin-bottom: 40px;
+    @include fonts(700, 32, 32);
+  }
+
+  .reviews__item {
+    width: 226px;
+    padding: 50px 25px 35px;
+    text-align: center;
+
+    & img {
+      top: 40px;
+      left: 40px;
+      @include size(68);
+    }
+
+    & h3 {
+      margin-bottom: 24px;
+      padding-left: 100px;
+      text-align: left;
+      @include fonts(700, 20, 26);
+    }
+  }
+
+  .reviews__slider-control {
+    @include size(16, 26);
+
+    &::after {
+      @include pseudo(16);
+    }
+
+    &--left {
+      left: calc(50% - 150px);
+    }
+
+    &--right {
+      right: calc(50% - 150px);
+    }
+  }
+}
