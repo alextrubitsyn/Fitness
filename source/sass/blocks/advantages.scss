@@ -1,3 +1,7 @@
+.advantages {
+  margin-bottom: 154px;
+}
+
 .advantages__container {
   display: flex;
   flex-direction: column;
@@ -125,7 +129,11 @@
 }
 
 @include for-tablet {
-  .advantages__wrapper {
+  .advantages {
+    margin-bottom: 149px;
+  }
+
+    .advantages__wrapper {
     width: 100%;
   }
 
@@ -230,6 +238,10 @@
 }
 
 @include for-mobile {
+  .advantages {
+    margin-bottom: 47px;
+  }
+
   .advantages__title {
     margin-bottom: 51px;
     @include fonts(700, 32, 32);

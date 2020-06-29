@@ -90,11 +90,11 @@ input[name="period"]:focus~.products__labels>label {
     border: 7px solid transparent;
 
     &:hover {
-      border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      border-image: $gradient;
       border-image-slice: 1;
 
       & a {
-        background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+        background: $gradient;
         color: #ffffff;
         border-color: transparent;
       }
@@ -156,7 +156,7 @@ input[name="period"]:focus~.products__labels>label {
     border: 2px solid #102654;
 
     &:focus {
-      background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      background: $gradient;
       color: #ffffff;
       border-color: transparent;
     }
@@ -171,7 +171,7 @@ input[name="period"]:focus~.products__labels>label {
       top: -7px;
       bottom: -14px;
       border: 7px solid transparent;
-      border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      border-image: $gradient;
       border-image-slice: 1;
     }
 
