@@ -69,7 +69,7 @@
     @include fonts(700, 14, 16);
     color: $for-dark-bg;
     text-align: center;
-    background-color: inherit;
+    background-color: $text;
     border: 3px solid #ffffff;
 
     &:hover,
@@ -139,6 +139,17 @@
     text-decoration: none;
     color: $text;
     @include fonts(400, 14, 21);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.5;
+      outline: none;
+    }
+
+    &:active {
+      color: red;
+    }
   }
 }
 
@@ -272,7 +283,7 @@
 
   .contacts__wrapper {
     width: 100%;
-    padding: 68px 15px 66px;
+    padding: 68px 15px 61px;
   }
 
   .contacts__title {

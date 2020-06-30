@@ -63,6 +63,7 @@
 
     &:hover,
     &:focus {
+      outline: none;
       cursor: pointer;
       opacity: 0.7;
     }
@@ -113,6 +114,7 @@
 
     &:hover,
     &:focus {
+      outline: none;
       cursor: pointer;
       opacity: 0.7;
     }

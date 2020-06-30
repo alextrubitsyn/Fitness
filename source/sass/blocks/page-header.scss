@@ -44,6 +44,7 @@
   &:focus {
     cursor: pointer;
     color: $price;
+    outline: none;
   }
 
   &:active {
@@ -116,6 +117,7 @@
   &:focus {
     cursor: pointer;
     background-color: #aa042d;
+    outline: none;
   }
 
   &:active {
