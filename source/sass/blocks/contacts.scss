@@ -1,0 +1,302 @@
+.contacts {
+  background: linear-gradient(to right, $text 50%, #ffffff 50%);
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 103px;
+}
+
+.contacts__form {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  @include clear;
+  padding: 62px 12.5% 70px 0;
+  color: $for-dark-bg;
+
+  & b {
+    display: block;
+    @include clear;
+    margin-bottom: 25px;
+    font-family: 'Bebas Neue', 'arial', sans-serif;
+    @include fonts(700, 49, 64);
+    letter-spacing: 0.03em;
+  }
+
+  & input {
+    display: block;
+    width: 190px;
+    @include clear;
+    padding: 10px 0;
+    color: $for-dark-bg;
+    background-color: $text;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #74819c;
+    border-radius: 0;
+    @include fonts(400, 14, 16);
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #ffffff;
+      @include fonts(400, 14, 16);
+    }
+  }
+
+  & input[type='text'] {
+    margin-right: auto;
+  }
+
+  & button {
+    @include clear;
+    width: 410px;
+    padding: 12px 0 19px;
+    @include fonts(700, 14, 16);
+    color: $for-dark-bg;
+    text-align: center;
+    background-color: inherit;
+    border: 3px solid #ffffff;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: red;
+      border-color: red;
+    }
+  }
+}
+
+.contacts__form-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 410px;
+  margin-bottom: 26px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 68px 0 66px 120px;
+}
+
+.contacts__title {
+  @include clear;
+  margin-bottom: 42px;
+  font-family: 'Bebas Neue', 'arial', sans-serif;
+  @include fonts(700, 49, 49);
+  letter-spacing: 0.03em;
+}
+
+.contacts__requisites {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 4px;
+  color: $text;
+}
+
+.contacts__address,
+.contacts__schedule,
+.contacts__phone,
+.contacts__email {
+
+  & h3 {
+    @include clear;
+    margin-bottom: 3px;
+    @include fonts(700, 16, 24);
+  }
+
+  & p {
+    @include clear;
+    @include fonts(400, 14, 21);
+  }
+
+  & a {
+    @include clear;
+    text-decoration: none;
+    color: $text;
+    @include fonts(400, 14, 21);
+  }
+}
+
+.contacts__wrapper-address-schedule {
+  width: 230px;
+  border-right: 1px solid #74819C;
+}
+
+.contacts__address,
+.contacts__phone {
+  margin-bottom: 18px;
+}
+
+.contacts__wrapper-phone-email {
+  padding-left: 60px;
+}
+
+@include for-tablet {
+  .contacts {
+    background: #ffffff;
+  }
+
+  .contacts__container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include clear;
+  }
+
+  .contacts__form {
+    width: 100%;
+    padding: 70px 45px 70px 17.32%;
+    background-color: $text;
+
+    & b {
+      margin-bottom: 27px;
+      @include fonts(700, 42, 42);
+    }
+
+    & input {
+      width: 206px;
+    }
+
+    & input[type='text'] {
+      margin-right: 60px;
+    }
+
+    & button {
+      width: 472px;
+    }
+  }
+
+  .contacts__form-wrapper {
+    width: 472px;
+  }
+
+  .contacts__wrapper {
+    width: 100%;
+    padding: 68px 0 66px 133px;
+  }
+
+  .contacts__title {
+    margin-bottom: 33px;
+    @include fonts(700, 42, 42);
+  }
+
+  .contacts__requisites {
+    padding-left: 0;
+  }
+
+  .contacts__address,
+  .contacts__schedule,
+  .contacts__phone,
+  .contacts__email {
+
+    & h3 {
+      margin-bottom: 7px;
+      @include fonts(700, 20, 30);
+    }
+
+    & p,
+    & a {
+      @include fonts(400, 18, 27);
+    }
+  }
+
+  .contacts__wrapper-address-schedule {
+    width: 267px;
+  }
+
+  .contacts__address,
+  .contacts__phone {
+    margin-bottom: 18px;
+  }
+
+  .contacts__wrapper-phone-email {
+    padding-left: 47px;
+  }
+}
+
+@include for-mobile {
+  .contacts__form {
+    width: 100%;
+    padding: 70px 15px 68px;
+
+    & b {
+      margin-bottom: 27px;
+      @include fonts(700, 32, 32);
+    }
+
+    & input {
+      width: 100%;
+    }
+
+    & input[type='text'] {
+      margin-right: 0;
+      margin-bottom: 26px;
+    }
+
+    & button {
+      width: 100%;
+      padding: 15px 0 18px;
+    }
+  }
+
+  .contacts__form-wrapper {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+
+  .contacts__wrapper {
+    width: 100%;
+    padding: 68px 15px 66px;
+  }
+
+  .contacts__title {
+    margin-bottom: 36px;
+    @include fonts(700, 32, 32);
+  }
+
+  .contacts__requisites {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .contacts__wrapper-address-schedule {
+    width: 100%;
+    margin-bottom: 18px;
+    border-right: none;
+  }
+
+  .contacts__address,
+  .contacts__phone {
+    margin-bottom: 18px;
+  }
+
+  .contacts__wrapper-phone-email {
+    padding-left: 0;
+  }
+}

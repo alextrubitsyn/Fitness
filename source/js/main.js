@@ -9,6 +9,8 @@
   var sliderReviewsItems = mainElementReviews.querySelectorAll('.reviews__item');
   var sliderReviewsMoveLeft = mainElementReviews.querySelector('.reviews__slider-control--left');
   var sliderReviewsMoveRight = mainElementReviews.querySelector('.reviews__slider-control--right');
+  var formContacts = document.querySelector('.contacts__form');
+  var telInput = formContacts.querySelector('input[type="tel"]');
   var positionLeftItemCoaches = 0;
   var positionLeftItemReviews = 0;
   var countSlidesCurrent = COUNT_SLIDES_DESKTOP;
@@ -104,6 +106,16 @@
     makeCoachesSlider();
   };
 
+  var onInputChange = function (evt) {
+    var val = evt.target.value;
+    var newval = val.replace(/\D/g, '').substr(0, 10);
+    if (val[0] === '+') {
+      evt.target.value = '+' + newval;
+    } else {
+      evt.target.value = newval;
+    }
+  };
+
   if (sliderCoachesItems && sliderCoachesMoveLeft && sliderCoachesMoveRight) {
     setCountSlides();
     makeCoachesSlider();
@@ -115,6 +127,10 @@
     makeReviewsSlider();
     sliderReviewsMoveLeft.addEventListener('click', onButtonLeftReviewsClick);
     sliderReviewsMoveRight.addEventListener('click', onButtonRightReviewsClick);
+  }
+
+  if (telInput) {
+    telInput.addEventListener('input', onInputChange, false);
   }
 
 })();

@@ -1712,9 +1712,21 @@ input[name="period"]:focus ~ .products__labels > label {
     font-size: 32px;
     line-height: 32px; }
   .advantages__sports-equipment {
-    width: 110%;
+    z-index: 1;
+    position: relative;
+    width: 100%;
     margin-bottom: 48px;
-    padding: 15px 30px 20px 28px; }
+    padding: 15px 30px 20px 28px;
+    background-color: inherit; }
+    .advantages__sports-equipment::before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 100%;
+      top: 0;
+      left: -15px;
+      background-color: #1c3374; }
     .advantages__sports-equipment b {
       margin-bottom: -20px; }
     .advantages__sports-equipment span {
@@ -2103,7 +2115,7 @@ input[name="period"]:focus ~ .products__labels > label {
       margin-top: auto; } }
 
 .reviews {
-  margin-bottom: 50px; }
+  margin-bottom: 120px; }
 
 .reviews__container {
   position: relative;
@@ -2139,7 +2151,9 @@ input[name="period"]:focus ~ .products__labels > label {
   min-height: 242px;
   padding: 54px 62px 54px 170px;
   color: #ffffff;
-  background-color: #1c3374; }
+  background-color: #1c3374;
+  -webkit-box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+          box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2); }
   .reviews__item--show {
     display: block; }
   .reviews__item img {
@@ -2208,7 +2222,7 @@ input[name="period"]:focus ~ .products__labels > label {
 
 @media (max-width: 1199px) {
   .reviews {
-    margin-bottom: 50px; }
+    margin-bottom: 100px; }
   .reviews__title {
     margin: 0;
     padding: 0;
@@ -2224,7 +2238,7 @@ input[name="period"]:focus ~ .products__labels > label {
 
 @media (max-width: 767px) {
   .reviews {
-    margin-bottom: 50px; }
+    margin-bottom: 70px; }
   .reviews__title {
     margin: 0;
     padding: 0;
@@ -2260,3 +2274,331 @@ input[name="period"]:focus ~ .products__labels > label {
       left: calc(50% - 150px); }
     .reviews__slider-control--right {
       right: calc(50% - 150px); } }
+
+.contacts {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, #ffffff));
+  background: linear-gradient(to right, #102654 50%, #ffffff 50%); }
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 103px; }
+
+.contacts__form {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  padding: 62px 12.5% 70px 0;
+  color: #ffffff; }
+  .contacts__form b {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    font-family: 'Bebas Neue', 'arial', sans-serif;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 64px;
+    letter-spacing: 0.03em; }
+  .contacts__form input {
+    display: block;
+    width: 190px;
+    margin: 0;
+    padding: 0;
+    padding: 10px 0;
+    color: #ffffff;
+    background-color: #102654;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #74819c;
+    border-radius: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px; }
+    .contacts__form input:hover {
+      opacity: 0.7; }
+    .contacts__form input:focus {
+      outline: none; }
+    .contacts__form input::-webkit-input-placeholder {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px; }
+    .contacts__form input::-moz-placeholder {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px; }
+    .contacts__form input:-ms-input-placeholder {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px; }
+    .contacts__form input::-ms-input-placeholder {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px; }
+    .contacts__form input::placeholder {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px; }
+  .contacts__form input[type='text'] {
+    margin-right: auto; }
+  .contacts__form button {
+    margin: 0;
+    padding: 0;
+    width: 410px;
+    padding: 12px 0 19px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    text-align: center;
+    background-color: inherit;
+    border: 3px solid #ffffff; }
+    .contacts__form button:hover, .contacts__form button:focus {
+      outline: none;
+      cursor: pointer;
+      opacity: 0.7; }
+    .contacts__form button:active {
+      color: red;
+      border-color: red; }
+
+.contacts__form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 410px;
+  margin-bottom: 26px; }
+
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding: 68px 0 66px 120px; }
+
+.contacts__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 42px;
+  font-family: 'Bebas Neue', 'arial', sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em; }
+
+.contacts__requisites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 4px;
+  color: #102654; }
+
+.contacts__address h3,
+.contacts__schedule h3,
+.contacts__phone h3,
+.contacts__email h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px; }
+
+.contacts__address p,
+.contacts__schedule p,
+.contacts__phone p,
+.contacts__email p {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px; }
+
+.contacts__address a,
+.contacts__schedule a,
+.contacts__phone a,
+.contacts__email a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #102654;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px; }
+
+.contacts__wrapper-address-schedule {
+  width: 230px;
+  border-right: 1px solid #74819C; }
+
+.contacts__address,
+.contacts__phone {
+  margin-bottom: 18px; }
+
+.contacts__wrapper-phone-email {
+  padding-left: 60px; }
+
+@media (max-width: 1199px) {
+  .contacts {
+    background: #ffffff; }
+  .contacts__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 0; }
+  .contacts__form {
+    width: 100%;
+    padding: 70px 45px 70px 17.32%;
+    background-color: #102654; }
+    .contacts__form b {
+      margin-bottom: 27px;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 42px; }
+    .contacts__form input {
+      width: 206px; }
+    .contacts__form input[type='text'] {
+      margin-right: 60px; }
+    .contacts__form button {
+      width: 472px; }
+  .contacts__form-wrapper {
+    width: 472px; }
+  .contacts__wrapper {
+    width: 100%;
+    padding: 68px 0 66px 133px; }
+  .contacts__title {
+    margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px; }
+  .contacts__requisites {
+    padding-left: 0; }
+  .contacts__address h3,
+  .contacts__schedule h3,
+  .contacts__phone h3,
+  .contacts__email h3 {
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px; }
+  .contacts__address p,
+  .contacts__address a,
+  .contacts__schedule p,
+  .contacts__schedule a,
+  .contacts__phone p,
+  .contacts__phone a,
+  .contacts__email p,
+  .contacts__email a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px; }
+  .contacts__wrapper-address-schedule {
+    width: 267px; }
+  .contacts__address,
+  .contacts__phone {
+    margin-bottom: 18px; }
+  .contacts__wrapper-phone-email {
+    padding-left: 47px; } }
+
+@media (max-width: 767px) {
+  .contacts__form {
+    width: 100%;
+    padding: 70px 15px 68px; }
+    .contacts__form b {
+      margin-bottom: 27px;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 32px; }
+    .contacts__form input {
+      width: 100%; }
+    .contacts__form input[type='text'] {
+      margin-right: 0;
+      margin-bottom: 26px; }
+    .contacts__form button {
+      width: 100%;
+      padding: 15px 0 18px; }
+  .contacts__form-wrapper {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 34px; }
+  .contacts__wrapper {
+    width: 100%;
+    padding: 68px 15px 66px; }
+  .contacts__title {
+    margin-bottom: 36px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px; }
+  .contacts__requisites {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0; }
+  .contacts__wrapper-address-schedule {
+    width: 100%;
+    margin-bottom: 18px;
+    border-right: none; }
+  .contacts__address,
+  .contacts__phone {
+    margin-bottom: 18px; }
+  .contacts__wrapper-phone-email {
+    padding-left: 0; } }

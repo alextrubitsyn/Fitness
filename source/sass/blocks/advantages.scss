@@ -40,7 +40,7 @@
   padding: 35px 30px 20px;
   text-align: center;
   color: $for-dark-bg;
-  background-color: #1c3374;
+  background-color: $action-color;
 
   & b {
     margin-bottom: -16px;
@@ -248,9 +248,22 @@
   }
 
   .advantages__sports-equipment {
-    width: 110%;
+    z-index: 1;
+    position: relative;
+    width: 100%;
     margin-bottom: 48px;
     padding: 15px 30px 20px 28px;
+    background-color: inherit;
+
+    &::before {
+      z-index: -1;
+      @include pseudo;
+      width: calc(100% + 30px);
+      height: 100%;
+      top: 0;
+      left: -15px;
+      background-color: $action-color;
+    }
 
     & b {
       margin-bottom: -20px;
