@@ -118,7 +118,7 @@
   }
 
   & a {
-    color: inherit;
+    color: $text;
 
     @include fonts(700, 12, 14);
     letter-spacing: 0.05em;

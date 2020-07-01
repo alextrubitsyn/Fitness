@@ -74,7 +74,6 @@
     color: #d10a42;
     cursor: pointer;
   }
-
 }
 
 .products__item {
@@ -173,6 +172,7 @@
 
     @include fonts(700, 12, 14);
     border: 2px solid #102654;
+    color: $text;
 
     &:focus {
       background: $gradient;
@@ -237,7 +237,6 @@
     &:not(:last-child) {
       margin-right: 44px;
     }
-
   }
 
   .products__item {
@@ -286,7 +285,6 @@
 
   .products__buttons {
     margin-bottom: 35px;
-
   }
 
   .products__button {
