@@ -1237,8 +1237,6 @@ input[type="file"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1256,7 +1254,7 @@ input[type="file"].visually-hidden {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 260px;
+  width: 23%;
   min-height: 294px;
   margin-bottom: 40px;
   padding: 53px 40px 53px 40px;
@@ -1271,7 +1269,7 @@ input[type="file"].visually-hidden {
     display: flex; }
   .coaches__item:hover img,
   .coaches__item:focus img {
-    display: none; }
+    z-index: -1; }
   .coaches__item:hover h3,
   .coaches__item:focus h3 {
     position: static;

@@ -17,7 +17,7 @@
 
 .coaches__list {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -27,7 +27,7 @@
   position: relative;
   flex-direction: column;
   align-items: flex-start;
-  width: 260px;
+  width: 23%;
   min-height: 294px;
   margin-bottom: 40px;
   padding: 53px 40px 53px 40px;
@@ -42,7 +42,7 @@
 
   &:hover img,
   &:focus img {
-    display: none;
+    z-index: -1;
   }
 
   &:hover h3,
