@@ -8,33 +8,11 @@
   @include retina-bg("../img/gym-desktop@2x.jpg");
   @include bg($position: right 14.5% center, $size: 48.3% auto);
 
-  &::before {
-    z-index: 1;
-
-    @include pseudo(26.65%, 228);
-    left: 540px;
-    bottom: 7px;
-    background-image: url("../img/gym-video-desktop.jpg");
-
-    @include retina-bg("../img/gym-video-desktop@2x.jpg");
-    @include bg($position: center, $size: cover);
-  }
-
-  &::after {
-    z-index: 2;
-
-    @include pseudo(26.65%, 228);
-    left: 540px;
-    bottom: 7px;
-    background-color: rgba(20, 54, 122, 0.5);
-    background-image: url("../img/arrow-right.svg");
-
-    @include bg($position: center, $size: 100px 100px);
-  }
-
   $padding-text: 5.2%;
 
   & h2 {
+    width: 40%;
+
     @include clear;
     margin-bottom: 8px;
     padding-top: 18px;
@@ -47,6 +25,7 @@
 
   & span {
     display: block;
+    width: 40%;
     margin-bottom: 40px;
     padding-left: $padding-text;
 
@@ -64,6 +43,40 @@
   }
 }
 
+.about-us__video {
+  z-index: 1;
+  position: absolute;
+
+  @include size(364, 228);
+  left: 540px;
+  bottom: 7px;
+  background-image: url("../img/gym-video-desktop.jpg");
+
+  @include retina-bg("../img/gym-video-desktop@2x.jpg");
+  @include bg($position: center, $size: cover);
+}
+
+.about-us__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/arrow-right.svg");
+
+  @include bg($position: center center, $size: 100px 100px);
+  background-color: rgba(20, 54, 122, 0.5);
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
 @include for-tablet {
   .about-us__container {
     margin-bottom: 100px;
@@ -75,26 +88,8 @@
     @include retina-bg("../img/gym-tablet@2x.jpg");
     @include bg($position: center bottom 83px, $size: calc(100% - 90px) auto);
 
-    &::before,
-    &::after {
-      @include pseudo(266, 167);
-      @include center;
-      bottom: 0;
-    }
-
-    &::before {
-      background-image: url("../img/gym-video-tablet.jpg");
-
-      @include retina-bg("../img/gym-video-tablet@2x.jpg");
-    }
-
-    &::after {
-      background-image: url("../img/arrow-right.svg");
-
-      @include bg($position: center, $size: 73px 73px);
-    }
-
     & h2 {
+      width: 100%;
       margin-bottom: 8px;
       padding: 0;
 
@@ -102,6 +97,7 @@
     }
 
     & span {
+      width: 100%;
       margin-bottom: 34px;
       padding: 0;
     }
@@ -114,6 +110,7 @@
     & p {
       display: none;
       width: 578px;
+      width: 85%;
 
       @include clear;
 
@@ -121,6 +118,19 @@
         display: block;
       }
     }
+  }
+
+  .about-us__video {
+    @include size(266, 167);
+    @include center;
+    bottom: 0;
+    background-image: url("../img/gym-video-tablet.jpg");
+
+    @include retina-bg("../img/gym-video-tablet@2x.jpg");
+  }
+
+  .about-us__button {
+    @include bg($position: center center, $size: 73px 73px);
   }
 }
 
@@ -134,25 +144,6 @@
 
     @include retina-bg("../img/gym-mobile@2x.jpg");
     @include bg($position: center bottom 207px, $size: 100% auto);
-
-    &::before,
-    &::after {
-      @include pseudo(100%, 167);
-      @include center;
-      bottom: 0;
-    }
-
-    &::before {
-      background-image: url("../img/gym-video-mobile.jpg");
-
-      @include retina-bg("../img/gym-video-mobile@2x.jpg");
-    }
-
-    &::after {
-      background-image: url("../img/arrow-right.svg");
-
-      @include bg($position: center, $size: 73px 73px);
-    }
 
     & h2 {
       margin-bottom: 5px;
@@ -171,7 +162,14 @@
     }
 
     & p {
-      width: 260px;
+      width: 90%;
     }
+  }
+
+  .about-us__video {
+    width: 100%;
+    background-image: url("../img/gym-video-mobile.jpg");
+
+    @include retina-bg("../img/gym-video-mobile@2x.jpg");
   }
 }

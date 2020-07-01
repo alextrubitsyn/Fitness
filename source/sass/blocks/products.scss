@@ -138,7 +138,7 @@ input[name="period"]:focus ~ .products__labels > label {
       @include pseudo(30, 42);
       @include center($x: false, $y: true);
       right: 0;
-      background-image: url("../../img/ruble.svg");
+      background-image: url("../img/ruble.svg");
 
       @include bg($position: right center, $size: 30px 42px);
     }
@@ -336,7 +336,7 @@ input[name="period"]:focus ~ .products__labels > label {
         @include pseudo(24, 33);
         @include center($x: false, $y: true);
         right: 0;
-        background-image: url("../../img/ruble.svg");
+        background-image: url("../img/ruble.svg");
 
         @include bg($position: right center, $size: 24px 33px);
       }
