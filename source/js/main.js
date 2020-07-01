@@ -9,6 +9,10 @@
   var sliderReviewsItems = mainElementReviews.querySelectorAll('.reviews__item');
   var sliderReviewsMoveLeft = mainElementReviews.querySelector('.reviews__slider-control--left');
   var sliderReviewsMoveRight = mainElementReviews.querySelector('.reviews__slider-control--right');
+  var elementProducts = document.querySelector('.products');
+  var buttonsProduct = elementProducts.querySelectorAll('.products__button');
+  var products = elementProducts.querySelectorAll('.products__item');
+  var elementButtons = elementProducts.querySelector('.products__buttons');
   var formContacts = document.querySelector('.contacts__form');
   var telInput = formContacts.querySelector('input[type="tel"]');
   var positionLeftItemCoaches = 0;
@@ -116,6 +120,38 @@
     }
   };
 
+  var onButtonProductsClick = function (evtBtnProdt) {
+    var classesElement = evtBtnProdt.target.classList;
+    for (var i = 0; i < buttonsProduct.length; i++) {
+      var item = buttonsProduct[i];
+      if (item.classList.contains('products__button--active')) {
+        item.classList.remove('products__button--active');
+      }
+    }
+
+    for (var j = 0; j < classesElement.length; j++) {
+      var itemClass = classesElement[j];
+      if (itemClass !== 'products__button') {
+        var prodModifierPos = itemClass.indexOf('--');
+        var prodModifier = '';
+        if (prodModifierPos >= 0) {
+          prodModifier = itemClass.slice(prodModifierPos, itemClass.length);
+        }
+      }
+    }
+    classesElement.add('products__button--active');
+    for (var z = 0; z < products.length; z++) {
+      if (products[z].classList.contains('products__item--show')) {
+        products[z].classList.remove('products__item--show');
+      }
+    }
+    var productActiveClass = 'products__item' + prodModifier;
+    var elementProdActive = elementProducts.querySelector('.' + productActiveClass);
+    if (elementProdActive) {
+      elementProdActive.classList.add('products__item--show');
+    }
+  };
+
   if (sliderCoachesItems && sliderCoachesMoveLeft && sliderCoachesMoveRight) {
     setCountSlides();
     makeCoachesSlider();
@@ -131,6 +167,10 @@
 
   if (telInput) {
     telInput.addEventListener('input', onInputChange, false);
+  }
+
+  if (buttonsProduct) {
+    elementButtons.addEventListener('click', onButtonProductsClick);
   }
 
 })();

@@ -33,46 +33,47 @@
   letter-spacing: 0.03em;
 }
 
-.products__period--1month:checked ~ .products__labels > label[for="month"]::after,
-.products__period--6month:checked ~ .products__labels > label[for="half-year"]::after,
-.products__period--12month:checked ~ .products__labels > label[for="year"]::after {
-  display: block;
-}
-
-input[name="period"]:focus ~ .products__labels > label {
-  color: #d10a42;
-}
-
-.products__labels {
+.products__buttons {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 37px;
 
-  @include fonts(400, 20, 30);
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
 
-  & label {
-    position: relative;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 
-    &:hover {
-      color: #d10a42;
-      cursor: pointer;
-    }
+.products__button {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-bottom: 10px;
+
+  @include fonts(400, 20, 30);
+
+  &--active {
+    color: #d10a42;
 
     &::after {
       @include pseudo(100%, 2);
       left: 0;
-      bottom: -4px;
-      display: none;
-      border: 2px solid #d10a42;
+      bottom: -3px;
+      background-color: #d10a42;
     }
   }
 
-  & label:not(:last-child) {
+  &:not(:last-child) {
     margin-right: 46px;
   }
+
+  &:hover,
+  &:focus {
+    color: #d10a42;
+    cursor: pointer;
+  }
+
 }
 
 .products__item {
@@ -80,6 +81,10 @@ input[name="period"]:focus ~ .products__labels > label {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+  &--show {
+    display: flex;
+  }
 
   & div {
     z-index: 1;
@@ -98,9 +103,10 @@ input[name="period"]:focus ~ .products__labels > label {
       border-image-slice: 1;
 
       & a {
+        padding: 26px 47px;
         background: $gradient;
         color: #ffffff;
-        border-color: transparent;
+        border: none;
       }
     }
   }
@@ -170,7 +176,9 @@ input[name="period"]:focus ~ .products__labels > label {
     &:focus {
       background: $gradient;
       color: #ffffff;
-      border-color: transparent;
+      padding: 26px 47px;
+      border: none;
+      outline: none;
     }
 
     &:focus::after {
@@ -192,12 +200,6 @@ input[name="period"]:focus ~ .products__labels > label {
       opacity: 0.5;
     }
   }
-}
-
-.products__period--1month:checked ~ .products__item--month,
-.products__period--6month:checked ~ .products__item--half-year,
-.products__period--12month:checked ~ .products__item--year {
-  display: flex;
 }
 
 @include for-tablet {

@@ -657,44 +657,43 @@ input[type="file"].visually-hidden {
   line-height: 49px;
   letter-spacing: 0.03em; }
 
-.products__period--1month:checked ~ .products__labels > label[for="month"]::after,
-.products__period--6month:checked ~ .products__labels > label[for="half-year"]::after,
-.products__period--12month:checked ~ .products__labels > label[for="year"]::after {
-  display: block; }
-
-input[name="period"]:focus ~ .products__labels > label {
-  color: #d10a42; }
-
-.products__labels {
+.products__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 37px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2); }
+
+.products__button {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-bottom: 10px;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2); }
-  .products__labels label {
-    position: relative;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgba(120, 120, 120, 0.2); }
-    .products__labels label:hover {
-      color: #d10a42;
-      cursor: pointer; }
-    .products__labels label::after {
+  line-height: 30px; }
+  .products__button--active {
+    color: #d10a42; }
+    .products__button--active::after {
       position: absolute;
       content: "";
       width: 100%;
       height: 2px;
       left: 0;
-      bottom: -4px;
-      display: none;
-      border: 2px solid #d10a42; }
-  .products__labels label:not(:last-child) {
+      bottom: -3px;
+      background-color: #d10a42; }
+  .products__button:not(:last-child) {
     margin-right: 46px; }
+  .products__button:hover, .products__button:focus {
+    color: #d10a42;
+    cursor: pointer; }
 
 .products__item {
   display: none;
@@ -707,6 +706,10 @@ input[name="period"]:focus ~ .products__labels > label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .products__item--show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .products__item div {
     z-index: 1;
     position: relative;
@@ -732,9 +735,10 @@ input[name="period"]:focus ~ .products__labels > label {
          border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
       border-image-slice: 1; }
       .products__item div:hover a {
+        padding: 26px 47px;
         background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
         color: #ffffff;
-        border-color: transparent; }
+        border: none; }
   .products__item div:not(:last-child) {
     margin-right: 40px; }
   .products__item h3 {
@@ -800,7 +804,9 @@ input[name="period"]:focus ~ .products__labels > label {
     .products__item a:focus {
       background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
       color: #ffffff;
-      border-color: transparent; }
+      padding: 26px 47px;
+      border: none;
+      outline: none; }
     .products__item a:focus::after {
       outline: none;
       position: absolute;
@@ -817,13 +823,6 @@ input[name="period"]:focus ~ .products__labels > label {
       border-image-slice: 1; }
     .products__item a:active {
       opacity: 0.5; }
-
-.products__period--1month:checked ~ .products__item--month,
-.products__period--6month:checked ~ .products__item--half-year,
-.products__period--12month:checked ~ .products__item--year {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
 
 @media (max-width: 1199px) {
   .products::after {
