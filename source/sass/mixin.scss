@@ -77,8 +77,8 @@
 }
 
 @mixin center-y {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @mixin for-tablet {
@@ -96,6 +96,6 @@
 @mixin retina-bg($file) {
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url($file);
-    }
+    background-image: url($file);
+  }
 }

@@ -6,6 +6,7 @@
   @include clear;
   margin-bottom: 52px;
   font-family: "Bebas Neue", "arial", sans-serif;
+
   @include fonts(700, 49, 49);
   letter-spacing: 0.03em;
 }
@@ -30,6 +31,7 @@
   min-height: 294px;
   margin-bottom: 40px;
   padding: 53px 40px 53px 40px;
+
   @include fonts(400, 14, 21);
   color: $for-dark-bg;
   background-color: rgba(16, 38, 84, 0.89);
@@ -44,7 +46,7 @@
   }
 
   &:hover h3,
-  &:focus h3{
+  &:focus h3 {
     position: static;
     text-align: center;
     left: auto;
@@ -66,20 +68,24 @@
     position: absolute;
     width: 100%;
     z-index: 20;
+
     @include center;
     bottom: 28px;
+
     @include clear;
     margin-bottom: -5px;
     align-self: center;
     text-align: center;
+
     @include fonts(700, 18, 27);
   }
 
   & span {
     align-self: center;
     margin-bottom: 33px;
+
     @include fonts(400, 16, 24);
-    color: #B6bdcc;
+    color: #b6bdcc;
   }
 }
 
@@ -93,7 +99,7 @@
     width: 160px;
     padding-left: 16px;
 
-    &::after{
+    &::after {
       @include pseudo(6);
       top: 6px;
       left: 0;
@@ -113,6 +119,7 @@
   top: calc(50% - 20px);
   transform: translateY(-50%);
   color: #afafaf;
+
   @include size(20, 35);
   background-color: transparent;
   border: none;
@@ -120,6 +127,7 @@
 
   &::after {
     top: 6px;
+
     @include pseudo(23);
     border-top-width: 2px;
     border-left-width: 2px;
@@ -133,11 +141,11 @@
   &:focus {
     outline: 0;
 
-  &:hover::after,
-  &:focus::after {
-    border-top-color: red;
-    border-left-color: red;
-  }
+    &:hover::after,
+    &:focus::after {
+      border-top-color: red;
+      border-left-color: red;
+    }
   }
 
   &--left {
@@ -163,6 +171,7 @@
   .coaches__title {
     margin-bottom: 42px;
     text-align: center;
+
     @include fonts(700, 42, 42);
   }
 
@@ -176,7 +185,7 @@
     padding: 51px 40px 51px 40px;
 
     &:hover h3,
-    &:focus h3{
+    &:focus h3 {
       padding-right: 10px;
     }
 
@@ -208,8 +217,9 @@
     margin-bottom: 139px;
   }
 
-    .coaches__title {
+  .coaches__title {
     margin-bottom: 42px;
+
     @include fonts(700, 32, 32);
   }
 
@@ -224,7 +234,7 @@
     padding: 43px 18px 18px 18px;
 
     &:hover h3,
-    &:focus h3{
+    &:focus h3 {
       padding-right: 0;
     }
 
@@ -240,6 +250,7 @@
 
   .coaches__slider-control {
     top: 50%;
+
     @include size(16, 26);
 
     &::after {

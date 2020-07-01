@@ -3,6 +3,7 @@
   width: 100%;
   color: $for-dark-bg;
   background-image: url("../img/gradient-desktop.jpg");
+
   @include bg($size: cover);
 }
 
@@ -13,22 +14,25 @@
   min-height: 658px;
   position: relative;
 
-    &::before {
-      z-index: 0;
-      @include pseudo(500, 556);
-      @include center($x: false, $y: true);
-      left: 563px;
-      background-image: url("../img/wallpaper-desktop.jpg");
-      @include bg;
-      @include retina-bg("../img/wallpaper-desktop@2x.jpg");
-    }
+  &::before {
+    z-index: 0;
+
+    @include pseudo(500, 556);
+    @include center($x: false, $y: true);
+    left: 563px;
+    background-image: url("../img/wallpaper-desktop.jpg");
+
+    @include bg;
+    @include retina-bg("../img/wallpaper-desktop@2x.jpg");
   }
+}
 
 .page-header__wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .page-header__logo {
   margin-right: auto;
 }
@@ -37,6 +41,7 @@
   text-decoration: none;
   color: inherit;
   font-family: "Bebas Neue", "arial", sans-serif;
+
   @include fonts(700, 26, 26);
   letter-spacing: 0.03em;
 
@@ -70,14 +75,17 @@
   @include clear;
   margin-bottom: 11px;
   font-family: "Bebas Neue", "arial", sans-serif;
+
   @include fonts(400, 49, 49);
   letter-spacing: 0.03em;
 }
 
 .page-header__label-title {
   max-width: 300px;
+
   @include clear;
   font-family: "Bebas Neue", "arial", sans-serif;
+
   @include fonts(700, 109, 109);
   letter-spacing: 0.03em;
 }
@@ -95,17 +103,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
   @include list;
   margin-right: 32px;
   padding-top: 21px;
 }
 
 .page-header__label-item {
-  @include fonts(400, 14, 21)
+  @include fonts(400, 14, 21);
 }
 
 .page-header__label-link {
   padding: 19px 54px;
+
   @include fonts(700, 12, 14);
   letter-spacing: 0.05em;
   text-decoration: none;
@@ -139,14 +149,15 @@
     padding-bottom: 96px;
     min-height: 554px;
 
-      &::before {
-        @include size(324, 390);
-        left: auto;
-        right: 45px;
-        background-image: url("../img/wallpaper-tablet.jpg");
-        @include retina-bg("../img/wallpaper-tablet@2x.jpg");
-      }
+    &::before {
+      @include size(324, 390);
+      left: auto;
+      right: 45px;
+      background-image: url("../img/wallpaper-tablet.jpg");
+
+      @include retina-bg("../img/wallpaper-tablet@2x.jpg");
     }
+  }
 
   .page-header__phone-link {
     @include fonts(700, 24, 24);
@@ -166,12 +177,14 @@
   .page-header__label-city {
     margin-bottom: 6px;
     margin-left: auto;
+
     @include fonts(400, 34, 34);
   }
 
   .page-header__label-title {
     max-width: 300px;
     margin-left: auto;
+
     @include fonts(700, 86, 86);
   }
 
@@ -200,14 +213,13 @@
     padding-bottom: 78px;
     min-height: 491px;
 
-      &::before {
-        display: none;
-      }
+    &::before {
+      display: none;
     }
+  }
 
   .page-header__phone-link {
     @include fonts(700, 20, 20);
-
   }
 
   .page-header__label-container {
@@ -224,12 +236,14 @@
   .page-header__label-city {
     margin-bottom: 12px;
     margin-left: 0;
+
     @include fonts(400, 28, 28);
   }
 
   .page-header__label-title {
     max-width: 100%;
     margin-left: 0;
+
     @include fonts(700, 78, 78);
   }
 

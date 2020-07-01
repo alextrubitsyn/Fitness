@@ -18,6 +18,7 @@
     top: 0;
     right: 0;
     background-image: url("../img/crossfit-desktop.jpg");
+
     @include retina-bg("../img/crossfit-desktop@2x.jpg");
     @include bg($size: cover);
   }
@@ -31,8 +32,10 @@
 
   & h2 {
     width: 251px;
+
     @include clear;
     font-family: "Bebas Neue", "arial", sans-serif;
+
     @include fonts(700, 90, 90);
     letter-spacing: 0.03em;
   }
@@ -52,6 +55,7 @@
   & h3 {
     @include clear;
     padding-bottom: 3px;
+
     @include fonts(400, 18, 27);
     border-bottom: 1px solid #ffffff;
   }
@@ -59,6 +63,7 @@
   & b {
     @include clear;
     margin-right: 7px;
+
     @include fonts(700, 40, 60);
   }
 
@@ -66,6 +71,7 @@
     @include clear;
     display: flex;
     flex-direction: column;
+
     @include fonts(400, 14, 21);
   }
 
@@ -85,6 +91,7 @@
   & h3 {
     @include clear;
     padding-bottom: 3px;
+
     @include fonts(400, 18, 27);
     border-bottom: 1px solid #ffffff;
   }
@@ -92,6 +99,7 @@
   & b {
     @include clear;
     margin-top: -6px;
+
     @include fonts(700, 40, 60);
   }
 }
@@ -99,6 +107,7 @@
 .promo__container > p {
   @include clear;
   margin-bottom: 44px;
+
   @include fonts(400, 18, 27);
 }
 
@@ -108,6 +117,7 @@
   text-align: center;
   text-decoration: none;
   color: inherit;
+
   @include fonts(700, 12, 14);
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -133,12 +143,12 @@
     padding: 50px 58.57% 50px 6.7%;
     min-height: 292px;
 
-  &::after {
-    @include pseudo(57%, 100%);
-    background-image: url("../img/crossfit-tablet.jpg");
-    @include retina-bg("../img/crossfit-tablet@2x.jpg");
-  }
+    &::after {
+      @include pseudo(57%, 100%);
+      background-image: url("../img/crossfit-tablet.jpg");
 
+      @include retina-bg("../img/crossfit-tablet@2x.jpg");
+    }
   }
 
   .promo__wrapper {
@@ -146,6 +156,7 @@
 
     & h2 {
       width: 145px;
+
       @include fonts(700, 52, 52);
     }
   }
@@ -156,11 +167,13 @@
     & h3 {
       margin-bottom: 4px;
       padding-bottom: 0;
+
       @include fonts(400, 12, 18);
     }
 
     & b {
       margin-right: 7px;
+
       @include fonts(700, 24, 36);
     }
 
@@ -170,10 +183,10 @@
   }
 
   .promo__time {
-
     & h3 {
       margin-bottom: 4px;
       padding-bottom: 0;
+
       @include fonts(400, 12, 18);
     }
 
@@ -184,11 +197,13 @@
 
   .promo__container > p {
     margin-bottom: 30px;
+
     @include fonts(400, 12, 18);
   }
 
   .promo__container > a {
     padding: 12px 51px;
+
     @include fonts(700, 10, 12);
     border: 2px solid #ffffff;
   }
@@ -203,14 +218,15 @@
     align-items: center;
     padding: 48px 0 343px;
 
-  &::after {
-    top: auto;
-    bottom: 0;
-    @include pseudo(100%, 50%);
-    background-image: url("../img/crossfit-mobile.jpg");
-    @include retina-bg("../img/crossfit-mobile@2x.jpg");
-  }
+    &::after {
+      top: auto;
+      bottom: 0;
 
+      @include pseudo(100%, 50%);
+      background-image: url("../img/crossfit-mobile.jpg");
+
+      @include retina-bg("../img/crossfit-mobile@2x.jpg");
+    }
   }
 
   .promo__wrapper {
@@ -234,10 +250,10 @@
   }
 
   .promo__time {
-
     & h3 {
       margin-bottom: 4px;
       padding-bottom: 0;
+
       @include fonts(400, 12, 18);
     }
   }

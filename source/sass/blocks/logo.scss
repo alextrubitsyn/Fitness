@@ -12,6 +12,7 @@
 
 .logo__image {
   display: block;
+
   @include size(89, 20);
 
   @include for-tablet {

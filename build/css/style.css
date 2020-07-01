@@ -450,7 +450,7 @@ input[type="file"].visually-hidden {
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .about-us__container {
       background-image: url("../img/gym-desktop@2x.jpg"); } }
-  .about-us__container:before {
+  .about-us__container::before {
     z-index: 1;
     position: absolute;
     content: "";
@@ -463,9 +463,9 @@ input[type="file"].visually-hidden {
     background-position: center;
     background-size: cover; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      .about-us__container:before {
+      .about-us__container::before {
         background-image: url("../img/gym-video-desktop@2x.jpg"); } }
-  .about-us__container:after {
+  .about-us__container::after {
     z-index: 2;
     position: absolute;
     content: "";
@@ -521,7 +521,7 @@ input[type="file"].visually-hidden {
       background-image: url("../img/gym-tablet@2x.jpg"); } }
 
 @media (max-width: 1199px) {
-    .about-us__container:before, .about-us__container:after {
+    .about-us__container::before, .about-us__container::after {
       position: absolute;
       content: "";
       width: 266px;
@@ -530,14 +530,14 @@ input[type="file"].visually-hidden {
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
       bottom: 0; }
-    .about-us__container:before {
+    .about-us__container::before {
       background-image: url("../img/gym-video-tablet.jpg"); } }
     @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
-      .about-us__container:before {
+      .about-us__container::before {
         background-image: url("../img/gym-video-tablet@2x.jpg"); } }
 
 @media (max-width: 1199px) {
-    .about-us__container:after {
+    .about-us__container::after {
       background-image: url("../img/arrow-right.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -581,7 +581,7 @@ input[type="file"].visually-hidden {
       background-image: url("../img/gym-mobile@2x.jpg"); } }
 
 @media (max-width: 767px) {
-    .about-us__container:before, .about-us__container:after {
+    .about-us__container::before, .about-us__container::after {
       position: absolute;
       content: "";
       width: 100%;
@@ -590,14 +590,14 @@ input[type="file"].visually-hidden {
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
       bottom: 0; }
-    .about-us__container:before {
+    .about-us__container::before {
       background-image: url("../img/gym-video-mobile.jpg"); } }
     @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-      .about-us__container:before {
+      .about-us__container::before {
         background-image: url("../img/gym-video-mobile@2x.jpg"); } }
 
 @media (max-width: 767px) {
-    .about-us__container:after {
+    .about-us__container::after {
       background-image: url("../img/arrow-right.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -664,13 +664,13 @@ input[type="file"].visually-hidden {
   line-height: 49px;
   letter-spacing: 0.03em; }
 
-#month:checked ~ .products__labels > label[for="month"]:after,
-#half-year:checked ~ .products__labels > label[for="half-year"]:after,
-#year:checked ~ .products__labels > label[for="year"]:after {
+.products__period--1month:checked ~ .products__labels > label[for="month"]::after,
+.products__period--6month:checked ~ .products__labels > label[for="half-year"]::after,
+.products__period--12month:checked ~ .products__labels > label[for="year"]::after {
   display: block; }
 
 input[name="period"]:focus ~ .products__labels > label {
-  color: #D10A42; }
+  color: #d10a42; }
 
 .products__labels {
   display: -webkit-box;
@@ -689,7 +689,7 @@ input[name="period"]:focus ~ .products__labels > label {
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(120, 120, 120, 0.2); }
     .products__labels label:hover {
-      color: #D10A42;
+      color: #d10a42;
       cursor: pointer; }
     .products__labels label::after {
       position: absolute;
@@ -699,7 +699,7 @@ input[name="period"]:focus ~ .products__labels > label {
       left: 0;
       bottom: -4px;
       display: none;
-      border: 2px solid #D10A42; }
+      border: 2px solid #d10a42; }
   .products__labels label:not(:last-child) {
     margin-right: 46px; }
 
@@ -735,11 +735,11 @@ input[name="period"]:focus ~ .products__labels > label {
     background-color: #ffffff;
     border: 7px solid transparent; }
     .products__item div:hover {
-      -o-border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
-         border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      -o-border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+         border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
       border-image-slice: 1; }
       .products__item div:hover a {
-        background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+        background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
         color: #ffffff;
         border-color: transparent; }
   .products__item div:not(:last-child) {
@@ -805,7 +805,7 @@ input[name="period"]:focus ~ .products__labels > label {
     line-height: 14px;
     border: 2px solid #102654; }
     .products__item a:focus {
-      background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
       color: #ffffff;
       border-color: transparent; }
     .products__item a:focus::after {
@@ -819,15 +819,15 @@ input[name="period"]:focus ~ .products__labels > label {
       top: -7px;
       bottom: -14px;
       border: 7px solid transparent;
-      -o-border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
-         border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+      -o-border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+         border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
       border-image-slice: 1; }
     .products__item a:active {
       opacity: 0.5; }
 
-#month:checked ~ .products__item--month,
-#half-year:checked ~ .products__item--half-year,
-#year:checked ~ .products__item--year {
+.products__period--1month:checked ~ .products__item--month,
+.products__period--6month:checked ~ .products__item--half-year,
+.products__period--12month:checked ~ .products__item--year {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1320,7 +1320,7 @@ input[name="period"]:focus ~ .products__labels > label {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #B6bdcc; }
+    color: #b6bdcc; }
 
 .coaches__description {
   margin: 0;
@@ -1923,8 +1923,8 @@ input[name="period"]:focus ~ .products__labels > label {
   width: 100%;
   padding: 18px 28px 30px;
   border: 7px solid transparent;
-  -o-border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
-     border-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+  -o-border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+     border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1; }
   .actions__item:not(:last-child) {
     margin-bottom: 40px; }
@@ -2156,8 +2156,8 @@ input[name="period"]:focus ~ .products__labels > label {
   padding: 54px 62px 54px 170px;
   color: #ffffff;
   background-color: #1c3374;
-  -webkit-box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
-          box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2); }
+  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+          box-shadow: 0 0 40px rgba(28, 51, 116, 0.2); }
   .reviews__item--show {
     display: block; }
   .reviews__item img {
@@ -2323,7 +2323,7 @@ input[name="period"]:focus ~ .products__labels > label {
     margin: 0;
     padding: 0;
     margin-bottom: 25px;
-    font-family: 'Bebas Neue', 'arial', sans-serif;
+    font-family: "Bebas Neue", "arial", sans-serif;
     font-weight: 700;
     font-size: 49px;
     line-height: 64px;
@@ -2372,7 +2372,7 @@ input[name="period"]:focus ~ .products__labels > label {
       font-weight: 400;
       font-size: 14px;
       line-height: 16px; }
-  .contacts__form input[type='text'] {
+  .contacts__form input[type="text"] {
     margin-right: auto; }
   .contacts__form button {
     margin: 0;
@@ -2422,7 +2422,7 @@ input[name="period"]:focus ~ .products__labels > label {
   margin: 0;
   padding: 0;
   margin-bottom: 42px;
-  font-family: 'Bebas Neue', 'arial', sans-serif;
+  font-family: "Bebas Neue", "arial", sans-serif;
   font-weight: 700;
   font-size: 49px;
   line-height: 49px;
@@ -2495,7 +2495,7 @@ input[name="period"]:focus ~ .products__labels > label {
 
 .contacts__wrapper-address-schedule {
   width: 230px;
-  border-right: 1px solid #74819C; }
+  border-right: 1px solid #74819c; }
 
 .contacts__address,
 .contacts__phone {
@@ -2531,7 +2531,7 @@ input[name="period"]:focus ~ .products__labels > label {
       line-height: 42px; }
     .contacts__form input {
       width: 206px; }
-    .contacts__form input[type='text'] {
+    .contacts__form input[type="text"] {
       margin-right: 60px; }
     .contacts__form button {
       width: 472px; }
@@ -2585,7 +2585,7 @@ input[name="period"]:focus ~ .products__labels > label {
       line-height: 32px; }
     .contacts__form input {
       width: 100%; }
-    .contacts__form input[type='text'] {
+    .contacts__form input[type="text"] {
       margin-right: 0;
       margin-bottom: 26px; }
     .contacts__form button {
@@ -2749,7 +2749,6 @@ input[name="period"]:focus ~ .products__labels > label {
     margin-right: 0;
     margin-bottom: 24px; }
   .page-footer__nav-item {
-    width: 50%;
     width: 144px; }
     .page-footer__nav-item:first-child {
       padding-top: 40px; }

@@ -14,6 +14,7 @@
   @include clear;
   margin-bottom: 52px;
   font-family: "Bebas Neue", "arial", sans-serif;
+
   @include fonts(700, 49, 49);
   letter-spacing: 0.03em;
   text-align: center;
@@ -27,7 +28,7 @@
   padding: 54px 62px 54px 170px;
   color: $for-dark-bg;
   background-color: $action-color;
-  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 
   &--show {
     display: block;
@@ -38,6 +39,7 @@
     top: 62px;
     left: 62px;
     display: block;
+
     @include size(80);
     border-radius: 50%;
   }
@@ -45,6 +47,7 @@
   & h3 {
     @include clear;
     margin-bottom: 13px;
+
     @include fonts(700, 20, 30);
   }
 
@@ -57,8 +60,10 @@
 .reviews__slider-control {
   position: absolute;
   display: block;
+
   @include center-y;
   color: #afafaf;
+
   @include size(20, 35);
   background-color: transparent;
   border: none;
@@ -66,6 +71,7 @@
 
   &::after {
     top: 6px;
+
     @include pseudo(23);
     border-top-width: 2px;
     border-left-width: 2px;
@@ -113,6 +119,7 @@
   .reviews__title {
     @include clear;
     margin-bottom: 40px;
+
     @include fonts(700, 42, 42);
   }
 
@@ -134,6 +141,7 @@
   .reviews__title {
     @include clear;
     margin-bottom: 40px;
+
     @include fonts(700, 32, 32);
   }
 
@@ -145,6 +153,7 @@
     & img {
       top: 40px;
       left: 40px;
+
       @include size(68);
     }
 
@@ -152,6 +161,7 @@
       margin-bottom: 24px;
       padding-left: 100px;
       text-align: left;
+
       @include fonts(700, 20, 26);
     }
   }

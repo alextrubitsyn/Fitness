@@ -18,15 +18,18 @@
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
+
   @include clear;
   padding: 62px 12.5% 70px 0;
   color: $for-dark-bg;
 
   & b {
     display: block;
+
     @include clear;
     margin-bottom: 25px;
-    font-family: 'Bebas Neue', 'arial', sans-serif;
+    font-family: "Bebas Neue", "arial", sans-serif;
+
     @include fonts(700, 49, 64);
     letter-spacing: 0.03em;
   }
@@ -34,6 +37,7 @@
   & input {
     display: block;
     width: 190px;
+
     @include clear;
     padding: 10px 0;
     color: $for-dark-bg;
@@ -42,6 +46,7 @@
     outline: none;
     border-bottom: 1px solid #74819c;
     border-radius: 0;
+
     @include fonts(400, 14, 16);
 
     &:hover {
@@ -54,11 +59,12 @@
 
     &::placeholder {
       color: #ffffff;
+
       @include fonts(400, 14, 16);
     }
   }
 
-  & input[type='text'] {
+  & input[type="text"] {
     margin-right: auto;
   }
 
@@ -66,6 +72,7 @@
     @include clear;
     width: 410px;
     padding: 12px 0 19px;
+
     @include fonts(700, 14, 16);
     color: $for-dark-bg;
     text-align: center;
@@ -104,7 +111,8 @@
 .contacts__title {
   @include clear;
   margin-bottom: 42px;
-  font-family: 'Bebas Neue', 'arial', sans-serif;
+  font-family: "Bebas Neue", "arial", sans-serif;
+
   @include fonts(700, 49, 49);
   letter-spacing: 0.03em;
 }
@@ -122,10 +130,10 @@
 .contacts__schedule,
 .contacts__phone,
 .contacts__email {
-
   & h3 {
     @include clear;
     margin-bottom: 3px;
+
     @include fonts(700, 16, 24);
   }
 
@@ -138,6 +146,7 @@
     @include clear;
     text-decoration: none;
     color: $text;
+
     @include fonts(400, 14, 21);
 
     &:hover,
@@ -155,7 +164,7 @@
 
 .contacts__wrapper-address-schedule {
   width: 230px;
-  border-right: 1px solid #74819C;
+  border-right: 1px solid #74819c;
 }
 
 .contacts__address,
@@ -176,6 +185,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
     @include clear;
   }
 
@@ -186,6 +196,7 @@
 
     & b {
       margin-bottom: 27px;
+
       @include fonts(700, 42, 42);
     }
 
@@ -193,7 +204,7 @@
       width: 206px;
     }
 
-    & input[type='text'] {
+    & input[type="text"] {
       margin-right: 60px;
     }
 
@@ -213,6 +224,7 @@
 
   .contacts__title {
     margin-bottom: 33px;
+
     @include fonts(700, 42, 42);
   }
 
@@ -224,9 +236,9 @@
   .contacts__schedule,
   .contacts__phone,
   .contacts__email {
-
     & h3 {
       margin-bottom: 7px;
+
       @include fonts(700, 20, 30);
     }
 
@@ -257,6 +269,7 @@
 
     & b {
       margin-bottom: 27px;
+
       @include fonts(700, 32, 32);
     }
 
@@ -264,7 +277,7 @@
       width: 100%;
     }
 
-    & input[type='text'] {
+    & input[type="text"] {
       margin-right: 0;
       margin-bottom: 26px;
     }
@@ -288,6 +301,7 @@
 
   .contacts__title {
     margin-bottom: 36px;
+
     @include fonts(700, 32, 32);
   }
 
