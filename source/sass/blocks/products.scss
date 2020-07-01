@@ -49,6 +49,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+  font-family: inherit;
   padding-bottom: 10px;
 
   @include fonts(400, 20, 30);
@@ -65,7 +66,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 46px;
+    margin-right: 34px;
   }
 
   &:hover,
@@ -224,23 +225,19 @@
     @include fonts(700, 42, 42);
   }
 
-  .products__labels {
+  .products__buttons {
     margin-bottom: 45px;
+  }
+
+  .products__button {
+    padding-bottom: 10px;
 
     @include fonts(400, 18, 27);
 
-    & label {
-      padding-bottom: 10px;
-
-      &::after {
-        left: 0;
-        bottom: -4px;
-      }
+    &:not(:last-child) {
+      margin-right: 44px;
     }
 
-    & label:not(:last-child) {
-      margin-right: 55px;
-    }
   }
 
   .products__item {
@@ -287,24 +284,25 @@
     @include fonts(700, 32, 32);
   }
 
-  .products__labels {
+  .products__buttons {
     margin-bottom: 35px;
 
+  }
+
+  .products__button {
     @include fonts(400, 16, 24);
+    padding-bottom: 10px;
 
-    & label {
-      padding-bottom: 10px;
-
-      &::after {
-        left: 0;
-        bottom: -4px;
-      }
+    &::after {
+      left: 0;
+      bottom: -4px;
     }
 
-    & label:not(:last-child) {
-      margin-right: 45px;
+    &:not(:last-child) {
+      margin-right: 33px;
     }
   }
+
 
   .products__item {
     flex-direction: column;

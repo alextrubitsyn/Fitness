@@ -675,6 +675,7 @@ input[type="file"].visually-hidden {
   background-color: transparent;
   border: none;
   outline: none;
+  font-family: inherit;
   padding-bottom: 10px;
   font-weight: 400;
   font-size: 20px;
@@ -690,7 +691,7 @@ input[type="file"].visually-hidden {
       bottom: -3px;
       background-color: #d10a42; }
   .products__button:not(:last-child) {
-    margin-right: 46px; }
+    margin-right: 34px; }
   .products__button:hover, .products__button:focus {
     color: #d10a42;
     cursor: pointer; }
@@ -845,18 +846,15 @@ input[type="file"].visually-hidden {
     font-weight: 700;
     font-size: 42px;
     line-height: 42px; }
-  .products__labels {
-    margin-bottom: 45px;
+  .products__buttons {
+    margin-bottom: 45px; }
+  .products__button {
+    padding-bottom: 10px;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px; }
-    .products__labels label {
-      padding-bottom: 10px; }
-      .products__labels label::after {
-        left: 0;
-        bottom: -4px; }
-    .products__labels label:not(:last-child) {
-      margin-right: 55px; }
+    .products__button:not(:last-child) {
+      margin-right: 44px; }
   .products__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -885,18 +883,18 @@ input[type="file"].visually-hidden {
     font-weight: 700;
     font-size: 32px;
     line-height: 32px; }
-  .products__labels {
-    margin-bottom: 35px;
+  .products__buttons {
+    margin-bottom: 35px; }
+  .products__button {
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px; }
-    .products__labels label {
-      padding-bottom: 10px; }
-      .products__labels label::after {
-        left: 0;
-        bottom: -4px; }
-    .products__labels label:not(:last-child) {
-      margin-right: 45px; }
+    line-height: 24px;
+    padding-bottom: 10px; }
+    .products__button::after {
+      left: 0;
+      bottom: -4px; }
+    .products__button:not(:last-child) {
+      margin-right: 33px; }
   .products__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2271,7 +2269,8 @@ input[type="file"].visually-hidden {
 
 .contacts {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, #ffffff));
-  background: linear-gradient(to right, #102654 50%, #ffffff 50%); }
+  background: linear-gradient(to right, #102654 50%, #ffffff 50%);
+  border-top: 1px solid #74819c; }
 
 .contacts__container {
   display: -webkit-box;
@@ -2312,7 +2311,7 @@ input[type="file"].visually-hidden {
     display: block;
     margin: 0;
     padding: 0;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     font-family: "Bebas Neue", "arial", sans-serif;
     font-weight: 700;
     font-size: 49px;
@@ -2326,6 +2325,7 @@ input[type="file"].visually-hidden {
     padding: 10px 0;
     color: #ffffff;
     background-color: #102654;
+    font-family: inherit;
     border: none;
     outline: none;
     border-bottom: 1px solid #74819c;
@@ -2368,10 +2368,13 @@ input[type="file"].visually-hidden {
     margin: 0;
     padding: 0;
     width: 410px;
-    padding: 12px 0 19px;
+    padding: 17px 0 15px;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: #ffffff;
     text-align: center;
     background-color: #102654;
@@ -2395,7 +2398,7 @@ input[type="file"].visually-hidden {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 410px;
-  margin-bottom: 26px; }
+  margin-bottom: 24px; }
 
 .contacts__wrapper {
   display: -webkit-box;
@@ -2496,7 +2499,8 @@ input[type="file"].visually-hidden {
 
 @media (max-width: 1199px) {
   .contacts {
-    background: #ffffff; }
+    background: #ffffff;
+    border: none; }
   .contacts__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2515,7 +2519,7 @@ input[type="file"].visually-hidden {
     padding: 70px 45px 70px 17.32%;
     background-color: #102654; }
     .contacts__form b {
-      margin-bottom: 27px;
+      margin-bottom: 29px;
       font-weight: 700;
       font-size: 42px;
       line-height: 42px; }
@@ -2529,7 +2533,7 @@ input[type="file"].visually-hidden {
     width: 472px; }
   .contacts__wrapper {
     width: 100%;
-    padding: 68px 0 66px 133px; }
+    padding: 68px 0 65px 17.32%; }
   .contacts__title {
     margin-bottom: 33px;
     font-weight: 700;
@@ -2569,7 +2573,7 @@ input[type="file"].visually-hidden {
     width: 100%;
     padding: 70px 15px 68px; }
     .contacts__form b {
-      margin-bottom: 27px;
+      margin-bottom: 28px;
       font-weight: 700;
       font-size: 32px;
       line-height: 32px; }
@@ -2579,8 +2583,7 @@ input[type="file"].visually-hidden {
       margin-right: 0;
       margin-bottom: 26px; }
     .contacts__form button {
-      width: 100%;
-      padding: 15px 0 18px; }
+      width: 100%; }
   .contacts__form-wrapper {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -2617,7 +2620,7 @@ input[type="file"].visually-hidden {
       flex-shrink: 0;
   padding: 38px 0;
   color: #ffffff;
-  background-color: #102654; }
+  background-color: #030a1a; }
 
 .page-footer__container {
   display: -webkit-box;
@@ -2683,8 +2686,6 @@ input[type="file"].visually-hidden {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   margin: 0;
   padding: 0;
   list-style: none;

@@ -1,5 +1,6 @@
 .contacts {
   background: linear-gradient(to right, $text 50%, #ffffff 50%);
+  border-top: 1px solid #74819c;
 }
 
 .contacts__container {
@@ -27,7 +28,7 @@
     display: block;
 
     @include clear;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     font-family: "Bebas Neue", "arial", sans-serif;
 
     @include fonts(700, 49, 64);
@@ -42,6 +43,7 @@
     padding: 10px 0;
     color: $for-dark-bg;
     background-color: $text;
+    font-family: inherit;
     border: none;
     outline: none;
     border-bottom: 1px solid #74819c;
@@ -71,9 +73,12 @@
   & button {
     @include clear;
     width: 410px;
-    padding: 12px 0 19px;
+    padding: 17px 0 15px;
 
     @include fonts(700, 14, 16);
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: $for-dark-bg;
     text-align: center;
     background-color: $text;
@@ -98,7 +103,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 410px;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .contacts__wrapper {
@@ -179,6 +184,7 @@
 @include for-tablet {
   .contacts {
     background: #ffffff;
+    border: none;
   }
 
   .contacts__container {
@@ -195,7 +201,7 @@
     background-color: $text;
 
     & b {
-      margin-bottom: 27px;
+      margin-bottom: 29px;
 
       @include fonts(700, 42, 42);
     }
@@ -219,7 +225,7 @@
 
   .contacts__wrapper {
     width: 100%;
-    padding: 68px 0 66px 133px;
+    padding: 68px 0 65px 17.32%;
   }
 
   .contacts__title {
@@ -268,7 +274,7 @@
     padding: 70px 15px 68px;
 
     & b {
-      margin-bottom: 27px;
+      margin-bottom: 28px;
 
       @include fonts(700, 32, 32);
     }
@@ -284,7 +290,6 @@
 
     & button {
       width: 100%;
-      padding: 15px 0 18px;
     }
   }
 

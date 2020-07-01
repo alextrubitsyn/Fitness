@@ -2,7 +2,7 @@
   flex-shrink: 0;
   padding: 38px 0;
   color: $for-dark-bg;
-  background-color: $text;
+  background-color: $footer-bg;
 }
 
 .page-footer__container {
@@ -56,7 +56,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-shrink: 0;
 
   @include list;
   margin-left: 30px;
