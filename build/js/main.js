@@ -6,6 +6,8 @@
   var sliderCoachesMoveLeft = mainElementCoaches.querySelector('.coaches__slider-control--left');
   var sliderCoachesMoveRight = mainElementCoaches.querySelector('.coaches__slider-control--right');
   var mainElementReviews = document.querySelector('.reviews__container');
+  var sliderReviewsWrapper = mainElementReviews.querySelector('.reviews__wrapper');
+  var sliderReviewsList = mainElementReviews.querySelector('.reviews__list');
   var sliderReviewsItems = mainElementReviews.querySelectorAll('.reviews__item');
   var sliderReviewsMoveLeft = mainElementReviews.querySelector('.reviews__slider-control--left');
   var sliderReviewsMoveRight = mainElementReviews.querySelector('.reviews__slider-control--right');
@@ -17,12 +19,16 @@
   var telInput = formContacts.querySelector('input[type="tel"]');
   var positionLeftItemCoaches = 0;
   var positionLeftItemReviews = 0;
+  var widthReviewCurrent = WIDTH_REVIEWS_DESKTOP;
   var countSlidesCurrent = COUNT_SLIDES_DESKTOP;
   var COUNT_SLIDES_DESKTOP = 4;
   var COUNT_SLIDES_TABLET = 2;
   var COUNT_SLIDES_MOBILE = 1;
   var BREAKPOINT_TABLET = 768;
   var BREAKPOINT_DESKTOP = 1200;
+  var WIDTH_REVIEWS_DESKTOP = 560;
+  var WIDTH_REVIEWS_TABLET = 566;
+  var WIDTH_REVIEWS_MOBILE = 226;
 
   var makeCoachesSlider = function () {
     for (var i = 0; i < sliderCoachesItems.length; i++) {
@@ -44,14 +50,28 @@
   };
 
   var makeReviewsSlider = function () {
-    for (var i = 0; i < sliderReviewsItems.length; i++) {
-      var item = sliderReviewsItems[i];
-      if (i === positionLeftItemReviews) {
-        item.classList.add('reviews__item--show');
-      } else {
-        item.classList.remove('reviews__item--show');
-      }
+    var widthElement = mainElementCoaches.offsetWidth;
+
+    sliderReviewsWrapper.style.height = sliderReviewsList.offsetHeight + 'px';
+
+    if (widthElement < BREAKPOINT_TABLET) {
+      widthReviewCurrent = WIDTH_REVIEWS_MOBILE;
+    } else if (widthElement >= BREAKPOINT_DESKTOP) {
+      widthReviewCurrent = WIDTH_REVIEWS_DESKTOP;
+    } else {
+      widthReviewCurrent = WIDTH_REVIEWS_TABLET;
     }
+
+    sliderReviewsList.style.left = -positionLeftItemReviews + 'px';
+
+    // for (var i = 0; i < sliderReviewsItems.length; i++) {
+    //   var item = sliderReviewsItems[i];
+    //   if (i === positionLeftItemReviews) {
+    //     item.classList.add('reviews__item--show');
+    //   } else {
+    //     item.classList.remove('reviews__item--show');
+    //   }
+    // }
   };
 
   var onButtonLeftCoachesClick = function (evtCoachesLeft) {
@@ -79,15 +99,21 @@
   var onButtonLeftReviewsClick = function (evtReviewsLeft) {
     evtReviewsLeft.preventDefault();
     if (positionLeftItemReviews > 0) {
-      positionLeftItemReviews--;
+      positionLeftItemReviews = positionLeftItemReviews - widthReviewCurrent;
+      if (positionLeftItemReviews < 0) {
+        positionLeftItemReviews = 0;
+      }
     }
     makeReviewsSlider();
   };
 
   var onButtonRightReviewsClick = function (evtReviewsRight) {
     evtReviewsRight.preventDefault();
-    if (positionLeftItemReviews < sliderReviewsItems.length - 1) {
-      positionLeftItemReviews++;
+    if (positionLeftItemReviews < (sliderReviewsItems.length - 1) * widthReviewCurrent) {
+      positionLeftItemReviews = positionLeftItemReviews + widthReviewCurrent;
+      if (positionLeftItemReviews > (sliderReviewsItems.length - 1) * widthReviewCurrent) {
+        positionLeftItemReviews = (sliderReviewsItems.length - 1) * widthReviewCurrent;
+      }
     }
     makeReviewsSlider();
   };
@@ -108,6 +134,7 @@
   window.onresize = function () {
     setCountSlides();
     makeCoachesSlider();
+    makeReviewsSlider();
   };
 
   var onInputChange = function (evt) {
@@ -160,6 +187,7 @@
   }
 
   if (sliderReviewsItems && sliderReviewsMoveLeft && sliderReviewsMoveRight) {
+    sliderReviewsWrapper.style.height = sliderReviewsList.offsetHeight + 'px';
     makeReviewsSlider();
     sliderReviewsMoveLeft.addEventListener('click', onButtonLeftReviewsClick);
     sliderReviewsMoveRight.addEventListener('click', onButtonRightReviewsClick);

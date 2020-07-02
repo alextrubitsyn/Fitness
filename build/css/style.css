@@ -2137,9 +2137,25 @@ input[type="file"].visually-hidden {
   letter-spacing: 0.03em;
   text-align: center; }
 
+.reviews__wrapper {
+  position: relative;
+  width: 560px;
+  overflow: hidden; }
+
+.reviews__list {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: 0;
+  top: 0; }
+
 .reviews__item {
   position: relative;
-  display: none;
   width: 560px;
   min-height: 242px;
   padding: 54px 62px 54px 170px;
@@ -2223,6 +2239,8 @@ input[type="file"].visually-hidden {
     font-weight: 700;
     font-size: 42px;
     line-height: 42px; }
+  .reviews__wrapper {
+    width: 566px; }
   .reviews__item {
     width: 566px;
     padding: 54px 62px 54px 173px; }
@@ -2239,6 +2257,8 @@ input[type="file"].visually-hidden {
     font-weight: 700;
     font-size: 32px;
     line-height: 32px; }
+  .reviews__wrapper {
+    width: 226px; }
   .reviews__item {
     width: 226px;
     padding: 50px 25px 35px;
