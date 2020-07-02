@@ -561,6 +561,7 @@ input[type="file"].visually-hidden {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    top: auto;
     bottom: 0;
     background-image: url("../img/gym-video-tablet.jpg"); } }
   @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
@@ -1392,7 +1393,8 @@ input[type="file"].visually-hidden {
     .coaches__item:focus h3 {
       padding-right: 10px; }
     .coaches__item h3 {
-      left: calc(50% + 4px); }
+      left: calc(50% + 4px);
+      left: calc(50% - 243px); }
     .coaches__item span {
       margin-bottom: 34px;
       padding-right: 10px; }
@@ -2684,10 +2686,11 @@ input[type="file"].visually-hidden {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   min-width: 110px;
+  width: 110px;
   margin: 0;
   padding: 0;
   list-style: none; }
