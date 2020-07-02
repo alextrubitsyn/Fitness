@@ -1255,7 +1255,7 @@ input[type="file"].visually-hidden {
   width: 23%;
   min-height: 294px;
   margin-bottom: 40px;
-  padding: 54px 40px 52px;
+  padding: 54px 40px 20px;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
