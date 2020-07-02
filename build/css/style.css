@@ -1911,11 +1911,11 @@ input[type="file"].visually-hidden {
           justify-content: flex-start;
   width: 100%;
   padding: 18px 28px 30px;
-  border: 7px solid transparent;
+  border-width: 7px;
+  border-style: solid;
   -o-border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
      border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
-  -webkit-border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
-  -mos-border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+  -webkit-border-image-slice: 1;
   border-image-slice: 1; }
   .actions__item:not(:last-child) {
     margin-bottom: 40px; }
@@ -2145,7 +2145,7 @@ input[type="file"].visually-hidden {
   overflow: hidden; }
 
 .reviews__list {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2158,6 +2158,8 @@ input[type="file"].visually-hidden {
   top: 0; }
 
 .reviews__item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   width: 560px;
   min-height: 242px;

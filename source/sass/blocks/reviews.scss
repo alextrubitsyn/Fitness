@@ -27,7 +27,7 @@
 }
 
 .reviews__list {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -35,6 +35,7 @@
 }
 
 .reviews__item {
+  flex-shrink: 0;
   position: relative;
   width: 560px;
   min-height: 242px;
