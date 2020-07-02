@@ -63,7 +63,6 @@
 
     positionLeftItemReviews = widthReviewCurrent * numberSlide;
     sliderReviewsList.style.left = -positionLeftItemReviews + 'px';
-    sliderReviewsWrapper.style.height = sliderReviewsList.offsetHeight + 'px';
   };
 
   var onButtonLeftCoachesClick = function (evtCoachesLeft) {
