@@ -17,7 +17,6 @@
 
 .coaches__list {
   display: flex;
-  // flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -191,7 +190,6 @@
 
     & h3 {
       left: calc(50% + 4px);
-      left: calc(50% - 243px);
     }
 
     & span {
@@ -204,11 +202,12 @@
     top: 50%;
 
     &--left {
-      left: -3px;
+      left: calc(50% - 340px);
+
     }
 
     &--right {
-      right: -3px;
+      right: calc(50% - 340px);
     }
   }
 }
@@ -259,11 +258,11 @@
     }
 
     &--left {
-      left: -5px;
+      left: calc(50% - 149px);
     }
 
     &--right {
-      right: -5px;
+      right: calc(50% - 149px);
     }
   }
 }

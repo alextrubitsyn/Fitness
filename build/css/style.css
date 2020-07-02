@@ -1393,17 +1393,16 @@ input[type="file"].visually-hidden {
     .coaches__item:focus h3 {
       padding-right: 10px; }
     .coaches__item h3 {
-      left: calc(50% + 4px);
-      left: calc(50% - 243px); }
+      left: calc(50% + 4px); }
     .coaches__item span {
       margin-bottom: 34px;
       padding-right: 10px; }
   .coaches__slider-control {
     top: 50%; }
     .coaches__slider-control--left {
-      left: -3px; }
+      left: calc(50% - 340px); }
     .coaches__slider-control--right {
-      right: -3px; } }
+      right: calc(50% - 340px); } }
 
 @media (max-width: 767px) {
   .coaches {
@@ -1440,9 +1439,9 @@ input[type="file"].visually-hidden {
       width: 16px;
       height: 16px; }
     .coaches__slider-control--left {
-      left: -5px; }
+      left: calc(50% - 149px); }
     .coaches__slider-control--right {
-      right: -5px; } }
+      right: calc(50% - 149px); } }
 
 .advantages {
   margin-bottom: 158px; }
