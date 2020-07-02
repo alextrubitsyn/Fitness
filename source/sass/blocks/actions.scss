@@ -97,6 +97,8 @@
   padding: 18px 28px 30px;
   border: 7px solid transparent;
   border-image: $gradient;
+  -webkit-border-image: $gradient;
+  -mos-border-image: $gradient;
   border-image-slice: 1;
 
   &:not(:last-child) {

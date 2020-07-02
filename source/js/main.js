@@ -19,8 +19,6 @@
   var telInput = formContacts.querySelector('input[type="tel"]');
   var positionLeftItemCoaches = 0;
   var positionLeftItemReviews = 0;
-  var widthReviewCurrent = WIDTH_REVIEWS_DESKTOP;
-  var countSlidesCurrent = COUNT_SLIDES_DESKTOP;
   var COUNT_SLIDES_DESKTOP = 4;
   var COUNT_SLIDES_TABLET = 2;
   var COUNT_SLIDES_MOBILE = 1;
@@ -29,6 +27,8 @@
   var WIDTH_REVIEWS_DESKTOP = 560;
   var WIDTH_REVIEWS_TABLET = 566;
   var WIDTH_REVIEWS_MOBILE = 226;
+  var widthReviewCurrent = WIDTH_REVIEWS_DESKTOP;
+  var countSlidesCurrent = COUNT_SLIDES_DESKTOP;
 
   var makeCoachesSlider = function () {
     for (var i = 0; i < sliderCoachesItems.length; i++) {
@@ -51,8 +51,7 @@
 
   var makeReviewsSlider = function () {
     var widthElement = mainElementCoaches.offsetWidth;
-
-    sliderReviewsWrapper.style.height = sliderReviewsList.offsetHeight + 'px';
+    var numberSlide = positionLeftItemReviews / widthReviewCurrent;
 
     if (widthElement < BREAKPOINT_TABLET) {
       widthReviewCurrent = WIDTH_REVIEWS_MOBILE;
@@ -62,16 +61,9 @@
       widthReviewCurrent = WIDTH_REVIEWS_TABLET;
     }
 
+    positionLeftItemReviews = widthReviewCurrent * numberSlide;
     sliderReviewsList.style.left = -positionLeftItemReviews + 'px';
-
-    // for (var i = 0; i < sliderReviewsItems.length; i++) {
-    //   var item = sliderReviewsItems[i];
-    //   if (i === positionLeftItemReviews) {
-    //     item.classList.add('reviews__item--show');
-    //   } else {
-    //     item.classList.remove('reviews__item--show');
-    //   }
-    // }
+    sliderReviewsWrapper.style.height = sliderReviewsList.offsetHeight + 'px';
   };
 
   var onButtonLeftCoachesClick = function (evtCoachesLeft) {

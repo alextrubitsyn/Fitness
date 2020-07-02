@@ -29,8 +29,8 @@
 .reviews__list {
   position: absolute;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
-  left: 0;
   top: 0;
 }
 
@@ -42,11 +42,6 @@
   color: $for-dark-bg;
   background-color: $action-color;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-
-  &--show {
-    display: block;
-    // opacity: 1;
-  }
 
   & img {
     position: absolute;
