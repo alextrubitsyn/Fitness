@@ -98,7 +98,7 @@
 
     if (widthElement < BREAKPOINT_TABLET) {
       countSlidesCurrent = COUNT_SLIDES_MOBILE;
-    } else if (widthElement > BREAKPOINT_DESKTOP) {
+    } else if (widthElement >= BREAKPOINT_DESKTOP) {
       countSlidesCurrent = COUNT_SLIDES_DESKTOP;
     } else {
       countSlidesCurrent = COUNT_SLIDES_TABLET;
