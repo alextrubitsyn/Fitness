@@ -448,7 +448,7 @@ input[type="file"].visually-hidden {
   padding-bottom: 146px;
   background-image: url("../img/gym-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: right 14.5% center;
+  background-position: right 14.5% top 120px;
   background-size: 48.3% auto; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .about-us__container {
@@ -489,7 +489,7 @@ input[type="file"].visually-hidden {
   width: 364px;
   height: 228px;
   left: 540px;
-  bottom: 7px;
+  top: 408px;
   background-image: url("../img/gym-video-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;

@@ -6,7 +6,7 @@
   background-image: url("../img/gym-desktop.jpg");
 
   @include retina-bg("../img/gym-desktop@2x.jpg");
-  @include bg($position: right 14.5% center, $size: 48.3% auto);
+  @include bg($position: right 14.5% top 120px, $size: 48.3% auto);
 
   $padding-text: 5.2%;
 
@@ -49,7 +49,7 @@
 
   @include size(364, 228);
   left: 540px;
-  bottom: 7px;
+  top: 408px;
   background-image: url("../img/gym-video-desktop.jpg");
 
   @include retina-bg("../img/gym-video-desktop@2x.jpg");
