@@ -53,9 +53,11 @@
   padding-bottom: 10px;
 
   @include fonts(400, 20, 30);
-  color: $text;
+  color: rgba(16, 38, 84, 0.5);
 
   &--active {
+    color: $text;
+    
     &::after {
       @include pseudo(100%, 2);
       left: 0;

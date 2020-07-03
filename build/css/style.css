@@ -680,15 +680,17 @@ input[type="file"].visually-hidden {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #102654; }
-  .products__button--active::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    left: 0;
-    bottom: -2px;
-    background-color: #d10a42; }
+  color: rgba(16, 38, 84, 0.5); }
+  .products__button--active {
+    color: #102654; }
+    .products__button--active::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: -2px;
+      background-color: #d10a42; }
   .products__button:not(:last-child) {
     margin-right: 34px; }
   .products__button:hover, .products__button:focus {
