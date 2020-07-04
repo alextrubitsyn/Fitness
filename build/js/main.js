@@ -1,6 +1,7 @@
 'use strict'
 
-;(function () {
+;
+(function () {
   var mainElementCoaches = document.querySelector('.coaches');
   var sliderCoachesItems = mainElementCoaches.querySelectorAll('.coaches__item');
   var sliderCoachesMoveLeft = mainElementCoaches.querySelector('.coaches__slider-control--left');
@@ -178,7 +179,6 @@
   }
 
   if (sliderReviewsItems && sliderReviewsMoveLeft && sliderReviewsMoveRight) {
-    sliderReviewsWrapper.style.height = sliderReviewsList.offsetHeight + 'px';
     makeReviewsSlider();
     sliderReviewsMoveLeft.addEventListener('click', onButtonLeftReviewsClick);
     sliderReviewsMoveRight.addEventListener('click', onButtonRightReviewsClick);
