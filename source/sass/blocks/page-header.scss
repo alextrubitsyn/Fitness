@@ -19,7 +19,7 @@
     z-index: 0;
 
     @include pseudo(500, 556);
-    @include center($x: false, $y: true);
+    @include center-y;
     left: 563px;
     background-image: url("../img/wallpaper-desktop.jpg");
 

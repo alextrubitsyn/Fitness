@@ -68,7 +68,7 @@
     width: 100%;
     z-index: 20;
 
-    @include center;
+    @include center-x;
     bottom: 28px;
 
     @include clear;

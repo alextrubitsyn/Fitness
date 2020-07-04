@@ -1,6 +1,27 @@
 @mixin size($width, $height: $width) {
   width: $width + px;
   height: $height + px;
+
+  @if $width {
+    $w-str: " "+ $width;
+    $h-str: " "+ $height;
+
+    @if (str-index($w-str, "px")==null and str-index($w-str, "%")==null) {
+      width: $width + px;
+    }
+
+    @else {
+      width: $width;
+    }
+
+    @if str-index($h-str, "px")==null and str-index($h-str, "%")==null {
+      height: $height + px;
+    }
+
+    @else {
+      height: $height;
+    }
+  }
 }
 
 @mixin clear {
@@ -64,21 +85,20 @@
   }
 }
 
-@mixin center($x: true, $y: false) {
-  @if ($x) {
+@mixin center {
     left: 50%;
-    transform: translateX(-50%);
-  }
-
-  @if ($y) {
     top: 50%;
-    transform: translateY(-50%);
-  }
+    transform: translate(-50%, -50%);
 }
 
 @mixin center-y {
   top: 50%;
   transform: translateY(-50%);
+}
+
+@mixin center-x {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @mixin for-tablet {

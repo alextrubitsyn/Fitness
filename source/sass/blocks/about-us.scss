@@ -121,7 +121,7 @@
 
   .about-us__video {
     @include size(266, 167);
-    @include center;
+    @include center-x;
     top: auto;
     bottom: 0;
     background-image: url("../img/gym-video-tablet.jpg");

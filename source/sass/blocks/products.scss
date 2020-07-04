@@ -57,7 +57,7 @@
 
   &--active {
     color: $text;
-    
+
     &::after {
       @include pseudo(100%, 2);
       left: 0;
@@ -144,7 +144,7 @@
 
     &::before {
       @include pseudo(30, 42);
-      @include center($x: false, $y: true);
+      @include center-y;
       right: 0;
       background-image: url("../img/ruble.svg");
 
@@ -334,7 +334,7 @@
 
       &::before {
         @include pseudo(24, 33);
-        @include center($x: false, $y: true);
+        @include center-y;
         right: 0;
         background-image: url("../img/ruble.svg");
 
