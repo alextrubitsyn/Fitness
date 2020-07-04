@@ -1954,8 +1954,9 @@ input[type="file"].visually-hidden {
   border-style: solid;
   -o-border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
      border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
-  -webkit-border-image-slice: 1;
-  border-image-slice: 1; }
+  -webkit-border-image: -webkit-linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image-slice: 1;
+  -webkit-border-image-slice: 1; }
   .actions__item:not(:last-child) {
     margin-bottom: 40px; }
   .actions__item h3 {
@@ -2785,7 +2786,6 @@ input[type="file"].visually-hidden {
   .page-footer__nav-list {
     min-width: 391px;
     width: 391px;
-    margin-right: 6.342%;
     margin-right: auto; }
   .page-footer__nav-item:not(:last-child) {
     margin-right: 30px; }

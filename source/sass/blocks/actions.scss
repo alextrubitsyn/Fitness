@@ -97,11 +97,11 @@
   padding: 18px 28px 30px;
   border-width: 7px;
   border-style: solid;
+  border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
   -moz-border-image: -moz-linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
   -webkit-border-image: -webkit-linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
-  border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
-  -webkit-border-image-slice: 1;
   border-image-slice: 1;
+  -webkit-border-image-slice: 1;
 
   &:not(:last-child) {
     margin-bottom: 40px;
