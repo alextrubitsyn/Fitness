@@ -6,7 +6,6 @@
   var sliderCoachesMoveLeft = mainElementCoaches.querySelector('.coaches__slider-control--left');
   var sliderCoachesMoveRight = mainElementCoaches.querySelector('.coaches__slider-control--right');
   var mainElementReviews = document.querySelector('.reviews__container');
-  var sliderReviewsWrapper = mainElementReviews.querySelector('.reviews__wrapper');
   var sliderReviewsList = mainElementReviews.querySelector('.reviews__list');
   var sliderReviewsItems = mainElementReviews.querySelectorAll('.reviews__item');
   var sliderReviewsMoveLeft = mainElementReviews.querySelector('.reviews__slider-control--left');
@@ -178,7 +177,6 @@
   }
 
   if (sliderReviewsItems && sliderReviewsMoveLeft && sliderReviewsMoveRight) {
-    sliderReviewsWrapper.style.height = sliderReviewsList.offsetHeight + 'px';
     makeReviewsSlider();
     sliderReviewsMoveLeft.addEventListener('click', onButtonLeftReviewsClick);
     sliderReviewsMoveRight.addEventListener('click', onButtonRightReviewsClick);
