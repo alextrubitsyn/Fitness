@@ -813,7 +813,7 @@ input[type="file"].visually-hidden {
       top: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
-      bottom: -7px;
+      top: 25px;
       font-weight: 700;
       font-size: 100px;
       line-height: 150px;
@@ -960,7 +960,6 @@ input[type="file"].visually-hidden {
         background-position: right center;
         background-size: 24px 33px; }
       .products__item p::after {
-        bottom: 0;
         font-weight: 700;
         font-size: 80px;
         line-height: 120px; } }

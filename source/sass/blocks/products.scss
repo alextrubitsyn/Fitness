@@ -157,7 +157,7 @@
       content: attr(data-description);
 
       @include center;
-      bottom: -7px;
+      top: 25px;
 
       @include fonts(700, 100, 150);
       color: #e8e8e8;
@@ -342,8 +342,6 @@
       }
 
       &::after {
-        bottom: 0;
-
         @include fonts(700, 80, 120);
       }
     }
