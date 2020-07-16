@@ -732,7 +732,7 @@ input[type="file"].visually-hidden {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  .products__item--show {
+  .products__item--active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }

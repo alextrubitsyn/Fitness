@@ -389,3 +389,49 @@ window.matchMedia ||
       (e._ = g),
       d(e);
   })(window, window.document, new window.Image());
+
+
+(function () {
+
+  var tabs = function (containerTabsButtons, buttonTabs, itemBlocks) {
+    // Функция работы табов
+    var listButtons = document.querySelector('.' + containerTabsButtons);
+    var buttonsTabs = document.querySelectorAll('.' + buttonTabs);
+    var itemsTabs = document.querySelectorAll('.' + itemBlocks);
+
+    var onButtonTabsClick = function (evtTabs) {
+      var btnClass = evtTabs.target.classList;
+      if (!btnClass.contains(buttonTabs + '--active')) {
+        for (var i = 0; i < buttonsTabs.length; i++) {
+          if (buttonsTabs[i].classList.contains(buttonTabs + '--active')) {
+            buttonsTabs[i].classList.remove(buttonTabs + '--active');
+          }
+        }
+        for (var j = 0; j < btnClass.length; j++) {
+          var modify = btnClass[j].indexOf('--');
+          if (modify > 0) {
+            var countryModify = btnClass[j].slice(modify);
+          }
+        }
+        btnClass.add(buttonTabs + '--active');
+        for (var z = 0; z < itemsTabs.length; z++) {
+          if (itemsTabs[z].classList.contains(itemBlocks + '--active')) {
+            itemsTabs[z].classList.remove(itemBlocks + '--active');
+          }
+          if (itemsTabs[z].classList.contains(itemBlocks + countryModify)) {
+            itemsTabs[z].classList.add(itemBlocks + '--active');
+          }
+        }
+      }
+    }
+
+    if (listButtons && buttonsTabs && itemsTabs) {
+      listButtons.addEventListener('click', onButtonTabsClick);
+    }
+
+  }
+
+  window.vendor = {
+    tabs: tabs
+  };
+})();
