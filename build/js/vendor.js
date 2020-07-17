@@ -393,7 +393,7 @@ window.matchMedia ||
 
 (function () {
 
-  var tabs = function (containerTabsButtons, buttonTabs, itemBlocks) {
+  var setTabs = function (containerTabsButtons, buttonTabs, itemBlocks) {
     // Функция работы табов
     var listButtons = document.querySelector('.' + containerTabsButtons);
     var buttonsTabs = document.querySelectorAll('.' + buttonTabs);
@@ -428,10 +428,35 @@ window.matchMedia ||
     if (listButtons && buttonsTabs && itemsTabs) {
       listButtons.addEventListener('click', onButtonTabsClick);
     }
+  }
 
+
+  var checkInputTel = function (formTel) {
+
+    var formBooking = document.querySelector('.' + formTel);
+    var telInput = formBooking.querySelector('input[type="tel"]');
+
+    var onInputChange = function (evtTel) {
+      var valueTel = evtTel.target.value;
+      var LENGHT_TEL = 11;
+      var newValueTel = valueTel.replace(/\D/g, '').substr(0, LENGHT_TEL);
+
+      if (valueTel[0] === '+') {
+        evtTel.target.value = '+' + newValueTel;
+
+      } else {
+        evtTel.target.value = newValueTel;
+      }
+    };
+
+    if (telInput) {
+      telInput.addEventListener('input', onInputChange, false);
+    }
   }
 
   window.vendor = {
-    tabs: tabs
+    setTabs: setTabs,
+    checkInputTel: checkInputTel
   };
+
 })();
